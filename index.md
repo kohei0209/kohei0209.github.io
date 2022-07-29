@@ -1,4 +1,4 @@
-## <font color="DarkOliveGreen">About Me</font>
+# <font color="DarkOliveGreen">About Me</font>
 
 ### Kohei Saijo / 西城 耕平
 
@@ -8,8 +8,8 @@
 * Source Separation
 * Unsupervised Source Separation
 
-[Google Scholar](https://scholar.google.com/citations?user=ptyPzY4AAAAJ&hl=ja&oi=ao)
-[Github](https://github.com/kohei0209)
+[Google Scholar](https://scholar.google.com/citations?user=ptyPzY4AAAAJ&hl=ja&oi=ao) | 
+[GitHub](https://github.com/kohei0209)
 
 
 ## <font color="DarkOliveGreen">Experiances</font>
