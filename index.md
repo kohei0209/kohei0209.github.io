@@ -1,4 +1,4 @@
-# <u><font color="DarkOliveGreen">About Me</font></u>
+## <u><font color="DarkOliveGreen">About Me</font></u>
 
 ### Kohei Saijo / 西城 耕平
 
@@ -12,7 +12,7 @@
 [GitHub](https://github.com/kohei0209)
 
 
-# <u><font color="DarkOliveGreen">Experiances</font></u>
+## <u><font color="DarkOliveGreen">Experiances</font></u>
 
 <span style="color: Gray; ">Aug. 2021 - Apr. 2022</span>  
 LINE Corporation, Tokyo, Japan
@@ -21,7 +21,7 @@ LINE Corporation, Tokyo, Japan
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
 
-# <u><font color="DarkOliveGreen">Publications</font></u>
+## <u><font color="DarkOliveGreen">Publications</font></u>
 
 ### International conference (peer-reviewed, first author)
 
@@ -62,14 +62,14 @@ LINE Corporation, Tokyo, Japan
 
 
 
-# <u><font color="DarkOliveGreen">Awards</font></u>
+## <u><font color="DarkOliveGreen">Awards</font></u>
 
 <span style="color: Gray; ">March 2022</span>  
 **Best Student Presentation Award**  
 from the Acoustical Society of Japan (ASJ)
 
 
-# <u><font color="DarkOliveGreen">Contact</font></u>
+## <u><font color="DarkOliveGreen">Contact</font></u>
 
 ### Address
 Media Intelligence Lab.  
