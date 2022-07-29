@@ -12,7 +12,7 @@
 [GitHub](https://github.com/kohei0209)
 
 
-## <font color="DarkOliveGreen">Experiances</font>
+# <font color="DarkOliveGreen">Experiances</font>
 
 <span style="color: Gray; ">Aug. 2021 - Apr. 2022</span>  
 LINE Corporation, Tokyo, Japan
@@ -20,7 +20,8 @@ LINE Corporation, Tokyo, Japan
 * Worked on source separation
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
-## Publications
+
+# <font color="DarkOliveGreen">Publications</font>
 
 ### International conference (peer-reviewed, first author)
 
@@ -61,14 +62,14 @@ LINE Corporation, Tokyo, Japan
 
 
 
-## <font color="DarkOliveGreen">Awards</font>
+# <font color="DarkOliveGreen">Awards</font>
 
 <span style="color: Gray; ">March 2022</span>  
 **Best Student Presentation Award**  
 from the Acoustical Society of Japan (ASJ)
 
 
-## <font color="DarkOliveGreen">Contact</font>
+# <font color="DarkOliveGreen">Contact</font>
 
 ### Address
 Media Intelligence Lab.  
