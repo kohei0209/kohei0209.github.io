@@ -1,4 +1,4 @@
-## <font color="MediumVioletRed">About Me</font>
+## <font color="DarkOliveGreen">About Me</font>
 
 ### Kohei Saijo / 西城 耕平
 
@@ -8,8 +8,11 @@
 * Source Separation
 * Unsupervised Source Separation
 
+[Google Scholar](https://scholar.google.com/citations?user=ptyPzY4AAAAJ&hl=ja&oi=ao)
+[Github](https://github.com/kohei0209)
 
-## <font color="DarkSlateBlue">Experiances</font>
+
+## <font color="DarkOliveGreen">Experiances</font>
 
 <span style="color: Gray; ">Aug. 2021 - Apr. 2022</span>  
 LINE Corporation, Tokyo, Japan
@@ -58,7 +61,7 @@ LINE Corporation, Tokyo, Japan
 
 
 
-## <font color="DarkRed">Awards</font>
+## <font color="DarkOliveGreen">Awards</font>
 
 <span style="color: Gray; ">March 2022</span>  
 **Best Student Presentation Award**  
