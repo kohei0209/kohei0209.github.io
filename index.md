@@ -4,16 +4,16 @@
 
 2nd year master's student in [Media Intelligence Laboratory](http://www.pcl.cs.waseda.ac.jp/) at Waseda University.
 
-### Research Interests
-#### Source Separation
+### Research Interest
+* Source Separation
 * Unsupervised Source Separation
 
 
 ## Experiances
 
-Aug. 2021 - Apr. 2022  
+<span style="color: Gray; ">Aug. 2021 - Apr. 2022</span>  
 LINE Corporation, Tokyo, Japan
-* Research internship
+* Research internship / Part-time researcher
 * Worked on source separation
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
@@ -60,8 +60,8 @@ LINE Corporation, Tokyo, Japan
 
 ## Awards
 
-March 2022  
-Best Student Presentation Award  
+<span style="color: Gray; ">March 2022</span>  
+**Best Student Presentation Award**  
 from the Acoustical Society of Japan (ASJ)
 
 
