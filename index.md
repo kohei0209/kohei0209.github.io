@@ -1,43 +1,76 @@
 ## About Me
 
-You can use the [editor on GitHub](https://github.com/kohei0209/kohei0209.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+### Kohei Saijo / 西城 耕平
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+2nd year master's student in [Media Intelligence Laboratory](http://www.pcl.cs.waseda.ac.jp/) at Waseda University.
+
+### Research Interests
+#### Source Separation
+* Unsupervised Source Separation
+
 
 ## Experiances
 
+Aug. 2021 - Apr. 2022  
+LINE Corporation, Tokyo, Japan
+* Research internship
+* Worked on source separation
+* Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
+
 ## Publications
+
+### International conference (peer-reviewed, first author)
+
+<u>Kohei Saijo,</u> Tetsuji Ogawa, 
+"**Unsupervised training of sequential neural beamformer using coarsely-separated and non-separated signals,**"
+2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022 (to appear).
+
+---
+
+<u>Kohei Saijo,</u> Robin Scheibler,
+"**Spatial Loss for Unsupervised Multi-channel Source Separation,**"
+2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022 (to appear).
+ [[arXiv]](https://arxiv.org/abs/2204.00210)
+
+---
+
+<u>Kohei Saijo,</u> Robin Scheibler,
+"**Independence-based Joint Dereverberation and Separation with Neural Source Model,**"
+2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022 (to appear).
+ [[arXiv]](http://128.84.21.203/abs/2110.06545)
+
+---
+
+<u>Kohei Saijo,</u> Tetsuji Ogawa, 
+"**Remix-Cycle-Consistent Learning on Adversarially Learned Separator for Accurate and Stable Unsupervised Speech Separation,**" 
+2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), May, 2022. 
+ [[arXiv]](https://arxiv.org/abs/2203.14080) [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/9746655)
+
+---
+
+<u>Kohei Saijo,</u> Kazuhiro Katagiri, Masaru Fujieda, Tetsunori Kobayashi, Tetsuji Ogawa, 
+"**Comparative Study on DNN-based Minimum Variance Beamforming Robust to Small Movements of Sound Sources,**" 
+2021 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Dec., 2021. 
+ [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/9689225)
+
+
+### Domestic conference / workshop (in Japanese)
+
+
 
 ## Awards
 
+March 2022  
+Best Student Presentation Award  
+from the Acoustical Society of Japan (ASJ)
+
+
 ## Contact
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Address
+Media Intelligence Lab.  
+Room 40-701 27 Waseda-machi
+Shinjuku-ku, Tokyo 162-0042, Japan
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kohei0209/kohei0209.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### E-mail
+saijo[at]pcl.cs.waseda.ac.jp
