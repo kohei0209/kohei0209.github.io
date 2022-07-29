@@ -1,4 +1,4 @@
-## About Me
+## <font color="MediumVioletRed">About Me</font>
 
 ### Kohei Saijo / 西城 耕平
 
@@ -9,7 +9,7 @@
 * Unsupervised Source Separation
 
 
-## Experiances
+## <font color="DarkSlateBlue">Experiances</font>
 
 <span style="color: Gray; ">Aug. 2021 - Apr. 2022</span>  
 LINE Corporation, Tokyo, Japan
@@ -58,14 +58,14 @@ LINE Corporation, Tokyo, Japan
 
 
 
-## Awards
+## <font color="DarkRed">Awards</font>
 
 <span style="color: Gray; ">March 2022</span>  
 **Best Student Presentation Award**  
 from the Acoustical Society of Japan (ASJ)
 
 
-## Contact
+## <font color="DarkOliveGreen">Contact</font>
 
 ### Address
 Media Intelligence Lab.  
