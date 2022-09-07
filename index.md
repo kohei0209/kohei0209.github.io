@@ -25,34 +25,34 @@ LINE Corporation, Tokyo, Japan
 
 ### International conference (peer-reviewed, first author)
 
-<u>Kohei Saijo,</u> Tetsuji Ogawa, 
+<u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Unsupervised training of sequential neural beamformer using coarsely-separated and non-separated signals,**"
 2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022 (to appear).
 
 ---
 
-<u>Kohei Saijo,</u> Robin Scheibler,
+<u>Kohei Saijo</u>, Robin Scheibler,
 "**Spatial Loss for Unsupervised Multi-channel Source Separation,**"
 2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022 (to appear).
  [[arXiv]](https://arxiv.org/abs/2204.00210)
 
 ---
 
-<u>Kohei Saijo,</u> Robin Scheibler,
+<u>Kohei Saijo</u>, Robin Scheibler,
 "**Independence-based Joint Dereverberation and Separation with Neural Source Model,**"
 2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022 (to appear).
  [[arXiv]](http://128.84.21.203/abs/2110.06545)
 
 ---
 
-<u>Kohei Saijo,</u> Tetsuji Ogawa, 
+<u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Remix-Cycle-Consistent Learning on Adversarially Learned Separator for Accurate and Stable Unsupervised Speech Separation,**" 
 2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), May, 2022. 
  [[arXiv]](https://arxiv.org/abs/2203.14080) [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/9746655)
 
 ---
 
-<u>Kohei Saijo,</u> Kazuhiro Katagiri, Masaru Fujieda, Tetsunori Kobayashi, Tetsuji Ogawa, 
+<u>Kohei Saijo</u>, Kazuhiro Katagiri, Masaru Fujieda, Tetsunori Kobayashi, Tetsuji Ogawa, 
 "**Comparative Study on DNN-based Minimum Variance Beamforming Robust to Small Movements of Sound Sources,**" 
 2021 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Dec., 2021. 
  [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/9689225)
@@ -60,31 +60,31 @@ LINE Corporation, Tokyo, Japan
 
 ### Domestic conference / workshop (in Japanese)
 
-<u>西城耕平，</u> 小川哲司，
+<u>西城耕平</u>，小川哲司，
 ”**ブラインド音源分離を教師としたTeacher-Student学習とUnmix-Remix無矛盾学習によるSequential Neural Beamformerの教師なし学習，**”
 日本音響学会研究発表会講演論文集(ASJ)，　September 2022 (to appear)．
 
 ---
 
-<u>西城耕平，</u> 小川哲司，
+<u>西城耕平</u>，小川哲司，
 ”**ブラインド音源分離の分離音と観測信号を教師信号として用いたSequential Neural Beamformerの教師なし学習，**”
 電子情報通信学会技術研究報告(SP)， June 2022．
 
 ---
 
-<u>西城耕平，</u> 小川哲司，
+<u>西城耕平</u>，小川哲司，
 ”**敵対的学習と Unmix-Remix 無矛盾学習による教師なし音源分離，**”
 日本音響学会研究発表会講演論文集(ASJ)， March 2022．
 
 ---
 
-<u>西城耕平，</u> 藤枝大, 片桐一浩， 小林哲則， 小川哲司，
+<u>西城耕平</u>，藤枝大, 片桐一浩， 小林哲則， 小川哲司，
 ”**DNNを用いた最小分散ビームフォーマの音源の動きに対する頑健性：音源追跡とエリア収音に基づくアプローチの比較，**”
 日本音響学会研究発表会講演論文集(ASJ)，　September 2021．
 
 ---
 
-<u>西城耕平，</u> 藤枝大, 片桐一浩， 小林哲則， 小川哲司，
+<u>西城耕平</u>，藤枝大, 片桐一浩， 小林哲則， 小川哲司，
 ”**空間フィルタ出力を補助情報として用いた音源の移動に頑健なニューラル音声強調，**”
 日本音響学会研究発表会講演論文集(ASJ)，　March 2021．
 
