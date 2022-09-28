@@ -21,6 +21,8 @@ LINE Corporation, Tokyo, Japan
 * Worked on multi-channel unsupervised source separation
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
+---
+
 <span style="color: Gray; ">Aug. 2021 - Sep. 2022</span>  
 LINE Corporation, Tokyo, Japan
 * Research internship
