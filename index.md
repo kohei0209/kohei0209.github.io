@@ -66,6 +66,8 @@ LINE Corporation, Tokyo, Japan
 "**Comparative Study on DNN-based Minimum Variance Beamforming Robust to Small Movements of Sound Sources,**" 
 2021 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Dec., 2021. 
  [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/9689225)
+ 
+ ---
 
 
 
@@ -75,6 +77,7 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 "**Design of Discriminators in GAN-Based Unsupervised Learning of Neural Post-Processors for Suppressing Localized Spectral Distortion,**"
 2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Nov., 2022 (To appear). 
 
+---
 
 
 ### Domestic conference / workshop (in Japanese)
@@ -106,6 +109,8 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 <u>西城耕平</u>，藤枝大，片桐一浩，小林哲則，小川哲司，
 ”**空間フィルタ出力を補助情報として用いた音源の移動に頑健なニューラル音声強調，**”
 日本音響学会研究発表会講演論文集(ASJ)，March 2021．
+
+---
 
 
 
