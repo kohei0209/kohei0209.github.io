@@ -14,10 +14,16 @@
 
 ## <u><font color="DarkOliveGreen">Experiances</font></u>
 
-<span style="color: Gray; ">Aug. 2021 - Apr. 2022</span>  
+<span style="color: Gray; ">Sep. 2021 - Apr. 2022</span>  
 LINE Corporation, Tokyo, Japan
-* Research internship / Part-time researcher
-* Worked on source separation
+* Part-time researcher
+* Worked on multi-channel unsupervised source separation
+* Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
+
+<span style="color: Gray; ">Aug. 2021 - Sep. 2022</span>  
+LINE Corporation, Tokyo, Japan
+* Research internship
+* Worked on multi-channel source separation and dereverberation
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
 
@@ -26,22 +32,23 @@ LINE Corporation, Tokyo, Japan
 ### International conference (peer-reviewed, first author)
 
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
-"**Unsupervised training of sequential neural beamformer using coarsely-separated and non-separated signals,**"
-2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022 (to appear).
+"**Unsupervised Training of Sequential Neural Beamformer Using Coarsely-separated and Non-separated Signals,**"
+2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022.
+[[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2022/saijo22c_interspeech.html)
 
 ---
 
 <u>Kohei Saijo</u>, Robin Scheibler,
 "**Spatial Loss for Unsupervised Multi-channel Source Separation,**"
-2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022 (to appear).
- [[arXiv]](https://arxiv.org/abs/2204.00210)
+2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022.
+ [[arXiv]](https://arxiv.org/abs/2204.00210) [[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2022/saijo22b_interspeech.html)
 
 ---
 
 <u>Kohei Saijo</u>, Robin Scheibler,
 "**Independence-based Joint Dereverberation and Separation with Neural Source Model,**"
-2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022 (to appear).
- [[arXiv]](http://128.84.21.203/abs/2110.06545)
+2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022.
+ [[arXiv]](http://128.84.21.203/abs/2110.06545) [[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2022/saijo22_interspeech.html)
 
 ---
 
@@ -56,6 +63,12 @@ LINE Corporation, Tokyo, Japan
 "**Comparative Study on DNN-based Minimum Variance Beamforming Robust to Small Movements of Sound Sources,**" 
 2021 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Dec., 2021. 
  [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/9689225)
+
+
+### International conference (peer-reviewed, co-author)
+Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
+"**Design of Discriminators in GAN-Based Unsupervised Learning of Neural Post-Processors for Suppressing Localized Spectral Distortion,**"
+2021 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Nov., 2021 (To appear). 
 
 
 ### Domestic conference / workshop (in Japanese)
