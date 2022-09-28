@@ -68,12 +68,15 @@ LINE Corporation, Tokyo, Japan
  [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/9689225)
 
 
+<br />
 ### International conference (peer-reviewed, co-author)
+
 Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 "**Design of Discriminators in GAN-Based Unsupervised Learning of Neural Post-Processors for Suppressing Localized Spectral Distortion,**"
-2021 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Nov., 2021 (To appear). 
+2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Nov., 2022 (To appear). 
 
 
+<br />
 ### Domestic conference / workshop (in Japanese)
 
 <u>西城耕平</u>，小川哲司，
