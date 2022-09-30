@@ -6,9 +6,8 @@
 
 ### Research Interest
 * Source Separation
- * Multi-channel Source Separation
- * Unsupervised Source Separation
-
+  * Unsupervised Source Separation
+  * Multi-channel Source Separation
 [Google Scholar](https://scholar.google.com/citations?user=ptyPzY4AAAAJ&hl=ja&oi=ao) | 
 [GitHub](https://github.com/kohei0209)
 
@@ -18,7 +17,7 @@
 <span style="color: Gray; ">Sep. 2021 - Apr. 2022</span>  
 LINE Corporation, Tokyo, Japan
 * Part-time researcher
-* Worked on multi-channel unsupervised source separation
+* Worked on **unsupervised multi-channel source separation**
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
 ---
@@ -26,7 +25,7 @@ LINE Corporation, Tokyo, Japan
 <span style="color: Gray; ">Aug. 2021 - Sep. 2022</span>  
 LINE Corporation, Tokyo, Japan
 * Research internship
-* Worked on multi-channel source separation and dereverberation
+* Worked on **multi-channel joint source separation and dereverberation**
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
 
