@@ -33,6 +33,15 @@ LINE Corporation, Tokyo, Japan
 
 ## <u><font color="DarkOliveGreen">Publications</font></u>
 
+
+### Preprint (peer-reviewed, first author)
+<u>Kohei Saijo</u>, Tetsuji Ogawa, 
+"**Self-Remixing: Unsupervised Speech Separation via Separation and Remixing,**"
+November 2022.
+[[arXiv]](https://arxiv.org/abs/2211.10194)
+
+---
+
 ### International conference (peer-reviewed, first author)
 
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
@@ -71,17 +80,22 @@ LINE Corporation, Tokyo, Japan
  ---
 
 
-
 ### International conference (peer-reviewed, co-author)
 
 Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 "**Design of Discriminators in GAN-Based Unsupervised Learning of Neural Post-Processors for Suppressing Localized Spectral Distortion,**"
-2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Nov., 2022 (To appear). 
+2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Nov., 2022. 
 
 ---
 
 
 ### Domestic conference / workshop (in Japanese)
+
+<u>西城耕平</u>，小川哲司，
+”**Self-Remixing: 音源の分離と再混合による教師なし音源分離，**”
+日本音響学会研究発表会講演論文集(ASJ)，March 2022 (to appear)．
+
+---
 
 <u>西城耕平</u>，小川哲司，
 ”**ブラインド音源分離を教師としたTeacher-Student学習とUnmix-Remix無矛盾学習によるSequential Neural Beamformerの教師なし学習，**”
