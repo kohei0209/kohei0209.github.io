@@ -5,9 +5,8 @@
 2nd year master's student in [Media Intelligence Laboratory](http://www.pcl.cs.waseda.ac.jp/) at Waseda University.
 
 ### Research Interest
-* Source Separation
-  * Unsupervised Source Separation
-  * Multi-channel Source Separation
+* Unsupervised Source Separation
+* Multi-channel Source Separation
  
 
 [Google Scholar](https://scholar.google.com/citations?user=ptyPzY4AAAAJ&hl=ja&oi=ao) | 
@@ -34,7 +33,7 @@ LINE Corporation, Tokyo, Japan
 ## <u><font color="DarkOliveGreen">Publications</font></u>
 
 
-### Preprint (peer-reviewed, first author)
+### Preprint (first author)
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Self-Remixing: Unsupervised Speech Separation via Separation and Remixing,**"
 November 2022.
@@ -99,7 +98,7 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 
 <u>西城耕平</u>，小川哲司，
 ”**ブラインド音源分離を教師としたTeacher-Student学習とUnmix-Remix無矛盾学習によるSequential Neural Beamformerの教師なし学習，**”
-日本音響学会研究発表会講演論文集(ASJ)，September 2022 (to appear)．
+日本音響学会研究発表会講演論文集(ASJ)，September 2022．
 
 ---
 
