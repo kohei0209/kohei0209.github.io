@@ -3,6 +3,7 @@
 ### Kohei Saijo / 西城 耕平
 
 2nd year master's student in [Media Intelligence Laboratory](http://www.pcl.cs.waseda.ac.jp/) at Waseda University.
+After 2023, I plan to continuously work on sound source separation as a Ph.D. student.
 
 ### Research Interest
 * Unsupervised Source Separation
@@ -23,7 +24,7 @@ LINE Corporation, Tokyo, Japan
 
 ---
 
-<span style="color: Gray; ">Aug. 2021 - Sep. 2022</span>  
+<span style="color: Gray; ">Aug. 2021 - Sep. 2021</span>  
 LINE Corporation, Tokyo, Japan
 * Research internship
 * Worked on **multi-channel joint source separation and dereverberation**
