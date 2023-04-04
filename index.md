@@ -2,8 +2,8 @@
 
 ### Kohei Saijo / 西城 耕平
 
-2nd year master's student in [Media Intelligence Laboratory](http://www.pcl.cs.waseda.ac.jp/) at Waseda University.
-After 2023, I plan to continuously work on sound source separation as a Ph.D. student.
+1st year Ph.D student in [Media Intelligence Laboratory](http://www.pcl.cs.waseda.ac.jp/) at Waseda University.
+I work on sound source separation.
 
 ### Research Interest
 * Unsupervised Source Separation
@@ -33,16 +33,12 @@ LINE Corporation, Tokyo, Japan
 
 ## <u><font color="DarkOliveGreen">Publications</font></u>
 
+### International conference (peer-reviewed, first author)
 
-### Preprint (first author)
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Self-Remixing: Unsupervised Speech Separation via Separation and Remixing,**"
-November 2022.
+2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), June, 2023 (to appear). 
 [[arXiv]](https://arxiv.org/abs/2211.10194)
-
----
-
-### International conference (peer-reviewed, first author)
 
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Unsupervised Training of Sequential Neural Beamformer Using Coarsely-separated and Non-separated Signals,**"
@@ -93,7 +89,7 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 
 <u>西城耕平</u>，小川哲司，
 ”**Self-Remixing: 音源の分離と再混合による教師なし音源分離，**”
-日本音響学会研究発表会講演論文集(ASJ)，March 2022 (to appear)．
+日本音響学会研究発表会講演論文集(ASJ)，March 2022．
 
 ---
 
