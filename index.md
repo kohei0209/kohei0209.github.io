@@ -40,6 +40,8 @@ LINE Corporation, Tokyo, Japan
 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), June, 2023 (to appear). 
 [[arXiv]](https://arxiv.org/abs/2211.10194)
 
+---
+
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Unsupervised Training of Sequential Neural Beamformer Using Coarsely-separated and Non-separated Signals,**"
 2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022.
