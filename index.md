@@ -16,6 +16,13 @@ I work on sound source separation.
 
 ## <u><font color="DarkOliveGreen">Experiances</font></u>
 
+<span style="color: Gray; ">Apr. 2023 - July 2023</span>  
+Carnegie Mellon University, Pittsburgh, PA, USA
+* Visiting scholar
+* Mentor: [Shinji Watanabe](https://sites.google.com/view/shinjiwatanabe)
+
+---
+
 <span style="color: Gray; ">Sep. 2021 - Apr. 2022</span>  
 LINE Corporation, Tokyo, Japan
 * Part-time researcher
