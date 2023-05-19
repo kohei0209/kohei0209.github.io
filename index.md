@@ -43,6 +43,12 @@ LINE Corporation, Tokyo, Japan
 ### International conference (peer-reviewed, first author)
 
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
+"**Remixing-based Unsupervised Source Separation from Scratch,**"
+2023 24th Annual Conference of International Speech Communication Association (INTERSPEECH), Aug., 2023 (to appear).
+
+---
+
+<u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Self-Remixing: Unsupervised Speech Separation via Separation and Remixing,**"
 2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), June, 2023 (to appear). 
 [[arXiv]](https://arxiv.org/abs/2211.10194)
