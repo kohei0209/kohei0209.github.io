@@ -44,48 +44,49 @@ LINE Corporation, Tokyo, Japan
 
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Remixing-based Unsupervised Source Separation from Scratch,**"
-2023 24th Annual Conference of International Speech Communication Association (INTERSPEECH), Aug., 2023 (to appear).
+2023 24th Annual Conference of International Speech Communication Association (INTERSPEECH), Aug. 2023
+[[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2023/saijo23_interspeech.html).
 
 ---
 
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Self-Remixing: Unsupervised Speech Separation via Separation and Remixing,**"
-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), June, 2023 (to appear). 
-[[arXiv]](https://arxiv.org/abs/2211.10194)
+2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), June 2023. 
+[[arXiv]](https://arxiv.org/abs/2211.10194) [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/10095596)
 
 ---
 
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Unsupervised Training of Sequential Neural Beamformer Using Coarsely-separated and Non-separated Signals,**"
-2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022.
+2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep. 2022.
 [[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2022/saijo22c_interspeech.html)
 
 ---
 
 <u>Kohei Saijo</u>, Robin Scheibler,
 "**Spatial Loss for Unsupervised Multi-channel Source Separation,**"
-2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022.
+2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep. 2022.
  [[arXiv]](https://arxiv.org/abs/2204.00210) [[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2022/saijo22b_interspeech.html)
 
 ---
 
 <u>Kohei Saijo</u>, Robin Scheibler,
 "**Independence-based Joint Dereverberation and Separation with Neural Source Model,**"
-2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep., 2022.
+2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep. 2022.
  [[arXiv]](http://128.84.21.203/abs/2110.06545) [[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2022/saijo22_interspeech.html)
 
 ---
 
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Remix-Cycle-Consistent Learning on Adversarially Learned Separator for Accurate and Stable Unsupervised Speech Separation,**" 
-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), May, 2022. 
+2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), May 2022. 
  [[arXiv]](https://arxiv.org/abs/2203.14080) [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/9746655)
 
 ---
 
 <u>Kohei Saijo</u>, Kazuhiro Katagiri, Masaru Fujieda, Tetsunori Kobayashi, Tetsuji Ogawa, 
 "**Comparative Study on DNN-based Minimum Variance Beamforming Robust to Small Movements of Sound Sources,**" 
-2021 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Dec., 2021. 
+2021 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Dec. 2021. 
  [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/9689225)
  
  ---
@@ -95,7 +96,7 @@ LINE Corporation, Tokyo, Japan
 
 Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 "**Design of Discriminators in GAN-Based Unsupervised Learning of Neural Post-Processors for Suppressing Localized Spectral Distortion,**"
-2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Nov., 2022. 
+2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Nov. 2022. 
 
 ---
 
