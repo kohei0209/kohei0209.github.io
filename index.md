@@ -11,8 +11,10 @@ I work on sound source separation.
  
 
 [Google Scholar](https://scholar.google.com/citations?user=ptyPzY4AAAAJ&hl=ja&oi=ao) | 
-[GitHub](https://github.com/kohei0209)
+[GitHub](https://github.com/kohei0209) | 
+[Twitter](https://twitter.com/kohei_1979)
 
+<br>
 
 ## <u><font color="DarkOliveGreen">Experiances</font></u>
 
@@ -37,6 +39,7 @@ LINE Corporation, Tokyo, Japan
 * Worked on **multi-channel joint source separation and dereverberation**
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
+<br>
 
 ## <u><font color="DarkOliveGreen">Publications</font></u>
 
@@ -44,7 +47,7 @@ LINE Corporation, Tokyo, Japan
 
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Remixing-based Unsupervised Source Separation from Scratch,**"
-2023 24th Annual Conference of International Speech Communication Association (INTERSPEECH), Aug. 2023
+2023 24th Annual Conference of International Speech Communication Association (INTERSPEECH), August 2023
 [[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2023/saijo23_interspeech.html).
 
 ---
@@ -58,21 +61,21 @@ LINE Corporation, Tokyo, Japan
 
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Unsupervised Training of Sequential Neural Beamformer Using Coarsely-separated and Non-separated Signals,**"
-2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep. 2022.
+2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), September 2022.
 [[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2022/saijo22c_interspeech.html)
 
 ---
 
 <u>Kohei Saijo</u>, Robin Scheibler,
 "**Spatial Loss for Unsupervised Multi-channel Source Separation,**"
-2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep. 2022.
+2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), September 2022.
  [[arXiv]](https://arxiv.org/abs/2204.00210) [[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2022/saijo22b_interspeech.html)
 
 ---
 
 <u>Kohei Saijo</u>, Robin Scheibler,
 "**Independence-based Joint Dereverberation and Separation with Neural Source Model,**"
-2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), Sep. 2022.
+2022 23rd Annual Conference of International Speech Communication Association (INTERSPEECH), September 2022.
  [[arXiv]](http://128.84.21.203/abs/2110.06545) [[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2022/saijo22_interspeech.html)
 
 ---
@@ -86,26 +89,34 @@ LINE Corporation, Tokyo, Japan
 
 <u>Kohei Saijo</u>, Kazuhiro Katagiri, Masaru Fujieda, Tetsunori Kobayashi, Tetsuji Ogawa, 
 "**Comparative Study on DNN-based Minimum Variance Beamforming Robust to Small Movements of Sound Sources,**" 
-2021 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Dec. 2021. 
+2021 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), December 2021. 
  [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/9689225)
  
- ---
+---
 
+<br>
 
 ### International conference (peer-reviewed, co-author)
 
 Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 "**Design of Discriminators in GAN-Based Unsupervised Learning of Neural Post-Processors for Suppressing Localized Spectral Distortion,**"
-2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), Nov. 2022. 
+2022 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), November 2022. 
 
 ---
 
+<br>
 
 ### Domestic conference / workshop (in Japanese)
 
 <u>西城耕平</u>，小川哲司，
+”**音源の分離と再混合による事前学習を必要としないモノラル教師なし音源分離，**”
+日本音響学会研究発表会講演論文集(ASJ)，September 2023．
+
+---
+
+<u>西城耕平</u>，小川哲司，
 ”**Self-Remixing: 音源の分離と再混合による教師なし音源分離，**”
-日本音響学会研究発表会講演論文集(ASJ)，March 2022．
+日本音響学会研究発表会講演論文集(ASJ)，March 2023．
 
 ---
 
@@ -139,7 +150,7 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 
 ---
 
-
+<br>
 
 ## <u><font color="DarkOliveGreen">Awards</font></u>
 
@@ -147,6 +158,28 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 **Best Student Presentation Award**  
 from the Acoustical Society of Japan (ASJ)
 
+<br>
+
+## <u><font color="DarkOliveGreen">Grants</font></u>
+
+<span style="color: Gray; ">April 2023 - March 2026</span>  
+**Support for Pioneering Research Initiated by the Next Generation (SPRING)**
+from Japan Science and Technology Agency (JST)
+
+---
+
+<span style="color: Gray; ">April 2023 - July 2023</span>  
+**Super Global University**
+from ICT & Robotics, Waseda University
+
+---
+
+<span style="color: Gray; ">April 2021 - March 2023</span>  
+**Repayment Exemption for Graduate Students with Excellent Achievements (Type I; full-exemption)**
+from Japan Student Services Organization (JASSO)
+
+
+<br>
 
 ## <u><font color="DarkOliveGreen">Contact</font></u>
 
