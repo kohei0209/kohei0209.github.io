@@ -21,6 +21,7 @@ I work on sound source separation.
 <span style="color: Gray; ">Apr. 2023 - July 2023</span>  
 Carnegie Mellon University, Pittsburgh, PA, USA
 * Visiting scholar
+* Worked on **multi-task universal speech enhancement**
 * Mentor: [Shinji Watanabe](https://sites.google.com/view/shinjiwatanabe)
 
 ---
@@ -45,10 +46,16 @@ LINE Corporation, Tokyo, Japan
 
 ### International conference (peer-reviewed, first author)
 
+<u>Kohei Saijo</u>, Wangyou Zhang, Zhong-Qiu Wang, Shinji Watanabe, Tetsunori Kobayashi, and Tetsuji Ogawa, 
+"**A Single Speech Enhancement Model Unifying Dereverberation, Denoising, Speaker Counting, Separation, and Extraction,**" 
+2023 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU), December 2023. (to appear)
+
+---
+
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Remixing-based Unsupervised Source Separation from Scratch,**"
-2023 24th Annual Conference of International Speech Communication Association (INTERSPEECH), August 2023
-[[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2023/saijo23_interspeech.html).
+2023 24th Annual Conference of International Speech Communication Association (INTERSPEECH), August 2023.
+[[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2023/saijo23_interspeech.html)
 
 ---
 
@@ -97,6 +104,12 @@ LINE Corporation, Tokyo, Japan
 <br>
 
 ### International conference (peer-reviewed, co-author)
+
+Wangyou Zhang, <u>Kohei Saijo</u>, Zhong-Qiu Wang, Shinji Watanabe, and Yanmin Qian, 
+"**Toward Universal Speech Enhancement For Diverse Input Conditions,**"
+2023 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU), December 2023. (to appear)
+
+---
 
 Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 "**Design of Discriminators in GAN-Based Unsupervised Learning of Neural Post-Processors for Suppressing Localized Spectral Distortion,**"
