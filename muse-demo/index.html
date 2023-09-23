@@ -1,0 +1,996 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SNRi Target Training for Joint Speech Enhancement and Recognition</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <!-- <link rel="shortcut icon" href="../../images/taco.png"> -->
+    <script>
+        function play(path) {
+            {
+                var player = document.getElementById('player');
+                player.src = path;
+                player.play();
+            }
+        }
+    </script>
+    <style>
+        .audio-cell {
+            /* Center audio widgets in the table cell. */
+            text-align: center;
+            padding-bottom: 1px;
+            padding-top: 1px;
+        }
+
+        .audio-cell-padded {
+            text-align: center;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .audio-header {
+            /* Don't wrap header text. */
+            white-space: nowrap;
+            /* Some breaking space between headers for readability. */
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        .reference-cell {
+            /* For uniformity and to wrap long reference text, limit the reference cell's width. */
+            width: 25%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .sample audio {
+            vertical-align: middle;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        .round-button {
+            box-sizing: border-box;
+            display: block;
+            width: 30px;
+            height: 30px;
+            padding-top: 8px;
+            padding-left: 3px;
+            line-height: 6px;
+            border: 1.2px solid #000;
+            border-radius: 50%;
+            color: #000;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.00);
+            font-size: 6px;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+            transition: all 0.2s ease;
+        }
+
+        .round-button:hover {
+            background-color: rgba(0, 0, 0, 0.0);
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+        }
+
+        .round-button:active {
+            background-color: rgba(0, 0, 0, 0.01);
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <article>
+            <header>
+                <h1>A Single Speech Enhancement Model Unifying Dereverberation, Denoising, Speaker Counting, Separation,
+                    and Extraction </h1>
+            </header>
+        </article>
+        <div>
+            <p>
+                <a href="https://kohei0209.github.io/">Kohei Saijo</a>,
+                <a href="https://sites.google.com/view/wangyou-zhang">Wangyou Zhang</a>,
+                <a href="https://zqwang7.github.io/">Zhong-Qiu Wang</a>,
+                <a href="https://sites.google.com/view/shinjiwatanabe">Shinji Watanabe</a>,
+                Tetsunori Kobayashi,
+                <a href="https://sites.google.com/site/ogatetsu/">Tetsuji Ogawa</a>,
+            </p>
+        </div>
+
+
+        <p><b>Abstract:</b>
+            We propose a multi-task universal speech enhancement (MUSE) model that can perform five speech enhancement
+            (SE) tasks: dereverberation, denoising, speech separation (SS), target speaker extraction (TSE), and speaker
+            counting.
+            This is achieved by integrating two modules into a SE model: 1) an internal separation module that does both
+            speaker counting and separation; and 2) a TSE module that extracts the target speech from the internal
+            separation outputs using target speaker cues.
+            The model is trained to perform TSE if the target speaker cue is given and SS otherwise.
+            By training the model to remove noise and reverberation, we allow the model to tackle the five tasks
+            mentioned above with a single model, which has not been accomplished yet.
+            Evaluation results demonstrate that the proposed MUSE model can successfully handle multiple tasks with a
+            single model.
+        </p>
+
+        <h2>
+            Contents:
+        </h2>
+        <p>
+            <a href="#anechoic">Audio examples on anechoic condition</a><br>
+            <a href="#reverberant">Audio examples on noisy reverberant condition</a><br>
+        </p>
+
+
+        <h2 id="anechoic">Audio examples on anechoic condition</h2>
+
+        <p><span class="section"><b>Example 2-mix</b></span></p>
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Input mixture <br />
+                    <img src="examples/demo_anechoic/2mix/mix/050c010n_0.001892_051c010s_-0.001892.png" width="300"
+                        alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/demo_anechoic/2mix/mix/050c010n_0.001892_051c010s_-0.001892.wav">
+                    </audio>
+            </tr>
+            <tr>
+                </td>
+                <td align="center"> Clean speech 1 <br />
+                    <img src="examples/demo_anechoic/2mix/reference/1/050c010n_0.001892_051c010s_-0.001892.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/demo_anechoic/2mix/reference/1/050c010n_0.001892_051c010s_-0.001892.wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech 2 <br />
+                    <img src="examples/demo_anechoic/2mix/reference/2/050c010n_0.001892_051c010s_-0.001892.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/demo_anechoic/2mix/reference/2/050c010n_0.001892_051c010s_-0.001892.wav">
+                    </audio>
+                </td>
+            </tr>
+            <td align="center"> Separation output 1 <br />
+                <img src="examples/demo_anechoic/2mix/enh/without_true_numspk/1/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/2mix/enh/without_true_numspk/1/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 2 <br />
+                <img src="examples/demo_anechoic/2mix/enh/without_true_numspk/2/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/2mix/enh/without_true_numspk/2/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.wav">
+                </audio>
+            </td>
+            </tr>
+            </tr>
+            <td align="center"> TSE output 1 <br />
+                <img src="examples/demo_anechoic/2mix/tse/without_true_numspk/1/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/2mix/tse/without_true_numspk/1/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 2 <br />
+                <img src="examples/demo_anechoic/2mix/tse/without_true_numspk/2/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/2mix/tse/without_true_numspk/2/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.wav">
+                </audio>
+            </td>
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <p><span class="section"><b>Example 3-mix</b></span></p>
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Input mixture <br />
+                    <img src="examples/demo_anechoic/3mix/mix/050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/demo_anechoic/3mix/mix/050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                    </audio>
+            </tr>
+            <tr>
+                </td>
+                <td align="center"> Clean speech 1 <br />
+                    <img src="examples/demo_anechoic/3mix/reference/1/050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/3mix/reference/1/050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech 2 <br />
+                    <img src="examples/demo_anechoic/3mix/reference/2/050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/3mix/reference/2/050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech 3 <br />
+                    <img src="examples/demo_anechoic/3mix/reference/3/050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/3mix/reference/3/050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                    </audio>
+                </td>
+            </tr>
+            <td align="center"> Separation output 1 <br />
+                <img src="examples/demo_anechoic/3mix/enh/without_true_numspk/1/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/3mix/enh/without_true_numspk/1/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 2 <br />
+                <img src="examples/demo_anechoic/3mix/enh/without_true_numspk/2/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/3mix/enh/without_true_numspk/2/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 3 <br />
+                <img src="examples/demo_anechoic/3mix/enh/without_true_numspk/3/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/3mix/enh/without_true_numspk/3/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                </audio>
+            </td>
+            </tr>
+            </tr>
+            <td align="center"> TSE output 1 <br />
+                <img src="examples/demo_anechoic/3mix/tse/without_true_numspk/1/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/3mix/tse/without_true_numspk/1/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 2 <br />
+                <img src="examples/demo_anechoic/3mix/tse/without_true_numspk/2/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/3mix/tse/without_true_numspk/2/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 3 <br />
+                <img src="examples/demo_anechoic/3mix/tse/without_true_numspk/3/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/3mix/tse/without_true_numspk/3/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                </audio>
+            </td>
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <p><span class="section"><b>Example 4-mix</b></span></p>
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Input mixture <br />
+                    <img src="examples/demo_anechoic/4mix/mix/050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/4mix/mix/050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                    </audio>
+            </tr>
+            <tr>
+                </td>
+                <td align="center"> Clean speech 1 <br />
+                    <img src="examples/demo_anechoic/4mix/reference/1/050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/4mix/reference/1/050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech 2 <br />
+                    <img src="examples/demo_anechoic/4mix/reference/2/050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/4mix/reference/2/050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech 3 <br />
+                    <img src="examples/demo_anechoic/4mix/reference/3/050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/4mix/reference/3/050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech 4 <br />
+                    <img src="examples/demo_anechoic/4mix/reference/4/050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/4mix/reference/4/050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                    </audio>
+                </td>
+            </tr>
+            <td align="center"> Separation output 1 <br />
+                <img src="examples/demo_anechoic/4mix/enh/without_true_numspk/1/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/4mix/enh/without_true_numspk/1/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 2 <br />
+                <img src="examples/demo_anechoic/4mix/enh/without_true_numspk/2/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/4mix/enh/without_true_numspk/2/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 3 <br />
+                <img src="examples/demo_anechoic/4mix/enh/without_true_numspk/3/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/4mix/enh/without_true_numspk/3/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 4 <br />
+                <img src="examples/demo_anechoic/4mix/enh/without_true_numspk/4/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/4mix/enh/without_true_numspk/4/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                </audio>
+            </td>
+            </tr>
+            </tr>
+            <td align="center"> TSE output 1 <br />
+                <img src="examples/demo_anechoic/4mix/tse/without_true_numspk/1/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/4mix/tse/without_true_numspk/1/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 2 <br />
+                <img src="examples/demo_anechoic/4mix/tse/without_true_numspk/2/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/4mix/tse/without_true_numspk/2/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 3 <br />
+                <img src="examples/demo_anechoic/4mix/tse/without_true_numspk/3/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/4mix/tse/without_true_numspk/3/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 4 <br />
+                <img src="examples/demo_anechoic/4mix/tse/without_true_numspk/4/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/4mix/tse/without_true_numspk/4/4mix_050_052_445_053_050o020j_1.1097069_052o0203_0.81778698_445c0204_-0.81778698_053a0505_-1.1097069.wav">
+                </audio>
+            </td>
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <p><span class="section"><b>Example 5-mix</b></span></p>
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Input mixture <br />
+                    <img src="examples/demo_anechoic/5mix/mix/050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/5mix/mix/050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                    </audio>
+            </tr>
+            <tr>
+                </td>
+                <td align="center"> Clean speech 1 <br />
+                    <img src="examples/demo_anechoic/5mix/reference/1/050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/5mix/reference/1/050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech 2 <br />
+                    <img src="examples/demo_anechoic/5mix/reference/2/050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/5mix/reference/2/050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech 3 <br />
+                    <img src="examples/demo_anechoic/5mix/reference/3/050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/5mix/reference/3/050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech 4 <br />
+                    <img src="examples/demo_anechoic/5mix/reference/4/050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/5mix/reference/4/050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech 5 <br />
+                    <img src="examples/demo_anechoic/5mix/reference/5/050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_anechoic/5mix/reference/5/050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                    </audio>
+                </td>
+            </tr>
+            <td align="center"> Separation output 1 <br />
+                <img src="examples/demo_anechoic/5mix/enh/without_true_numspk/1/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/5mix/enh/without_true_numspk/1/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 2 <br />
+                <img src="examples/demo_anechoic/5mix/enh/without_true_numspk/2/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/5mix/enh/without_true_numspk/2/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 3 <br />
+                <img src="examples/demo_anechoic/5mix/enh/without_true_numspk/3/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/5mix/enh/without_true_numspk/3/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 4 <br />
+                <img src="examples/demo_anechoic/5mix/enh/without_true_numspk/4/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/5mix/enh/without_true_numspk/4/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 5 <br />
+                <img src="examples/demo_anechoic/5mix/enh/without_true_numspk/5/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/5mix/enh/without_true_numspk/5/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                </audio>
+            </td>
+            </tr>
+            </tr>
+            <td align="center"> TSE output 1 <br />
+                <img src="examples/demo_anechoic/5mix/tse/without_true_numspk/1/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/5mix/tse/without_true_numspk/1/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 2 <br />
+                <img src="examples/demo_anechoic/5mix/tse/without_true_numspk/2/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/5mix/tse/without_true_numspk/2/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 3 <br />
+                <img src="examples/demo_anechoic/5mix/tse/without_true_numspk/3/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/5mix/tse/without_true_numspk/3/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 4 <br />
+                <img src="examples/demo_anechoic/5mix/tse/without_true_numspk/4/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/5mix/tse/without_true_numspk/4/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 5 <br />
+                <img src="examples/demo_anechoic/5mix/tse/without_true_numspk/5/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_anechoic/5mix/tse/without_true_numspk/5/5mix_050_420_053_22g_22h_050o020k_0.44480915_420c020m_0.18823178_053o020q_-0.18823178_22go010p_-0.44480915_22ha0102_0.wav">
+                </audio>
+            </td>
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <h2 id="reverberant">Audio examples on noisy reverberant condition</h2>
+
+        <p><span class="section"><b>Example 1-mix</b></span></p>
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Input mixture <br />
+                    <img src="examples/demo_reverb/1mix/mix/1mix_050_050a0504.png" width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/demo_reverb/1mix/mix/1mix_050_050a0504.wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> Reference 1 <br />
+                    <img src="examples/demo_reverb/1mix/reference/1/1mix_050_050a0504.png" width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/demo_reverb/1mix/reference/1/1mix_050_050a0504.wav">
+                    </audio>
+                </td>
+            </tr>
+            <td align="center"> Separation output 1 <br />
+                <img src="examples/demo_reverb/1mix/enh/without_true_numspk/1/1mix_050_050a0504.png" width="300"
+                    alt="" /> <br />
+                <audio controls="">
+                    <source src="examples/demo_reverb/1mix/enh/without_true_numspk/1/1mix_050_050a0504.wav">
+                </audio>
+            </td>
+            </tr>
+            </tr>
+            <td align="center"> TSE output 1 <br />
+                <img src="examples/demo_reverb/1mix/tse/without_true_numspk/1/1mix_050_050a0504.png" width="300"
+                    alt="" /> <br />
+                <audio controls="">
+                    <source src="examples/demo_reverb/1mix/tse/without_true_numspk/1/1mix_050_050a0504.wav">
+                </audio>
+            </td>
+            </tr>
+        </table>
+
+        <p><span class="section"><b>Example 2-mix</b></span></p>
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Input mixture <br />
+                    <img src="examples/demo_reverb/2mix/mix/050c010n_0.001892_051c010s_-0.001892.png" width="300"
+                        alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/demo_reverb/2mix/mix/050c010n_0.001892_051c010s_-0.001892.wav">
+                    </audio>
+            </tr>
+            <tr>
+                </td>
+                <td align="center"> Clean speech 1 <br />
+                    <img src="examples/demo_reverb/2mix/reference/1/050c010n_0.001892_051c010s_-0.001892.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/demo_reverb/2mix/reference/1/050c010n_0.001892_051c010s_-0.001892.wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech 2 <br />
+                    <img src="examples/demo_reverb/2mix/reference/2/050c010n_0.001892_051c010s_-0.001892.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/demo_reverb/2mix/reference/2/050c010n_0.001892_051c010s_-0.001892.wav">
+                    </audio>
+                </td>
+            </tr>
+            <td align="center"> Separation output 1 <br />
+                <img src="examples/demo_reverb/2mix/enh/without_true_numspk/1/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/2mix/enh/without_true_numspk/1/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 2 <br />
+                <img src="examples/demo_reverb/2mix/enh/without_true_numspk/2/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/2mix/enh/without_true_numspk/2/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.wav">
+                </audio>
+            </td>
+            </tr>
+            </tr>
+            <td align="center"> TSE output 1 <br />
+                <img src="examples/demo_reverb/2mix/tse/without_true_numspk/1/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/2mix/tse/without_true_numspk/1/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 2 <br />
+                <img src="examples/demo_reverb/2mix/tse/without_true_numspk/2/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/2mix/tse/without_true_numspk/2/2mix_050_051_050c010n_0.001892_051c010s_-0.001892.wav">
+                </audio>
+            </td>
+            </tr>
+        </table>
+
+        <p><span class="section"><b>Example 3-mix</b></span></p>
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Input mixture <br />
+                    <img src="examples/demo_reverb/3mix/mix/050a050h_1.0204_052c0108_-1.0204_421o030e_0.png" width="300"
+                        alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/demo_reverb/3mix/mix/050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> Reference 1 <br />
+                    <img src="examples/demo_reverb/3mix/reference/1/050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/3mix/reference/1/050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Reference 2 <br />
+                    <img src="examples/demo_reverb/3mix/reference/2/050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/3mix/reference/2/050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Reference 3 <br />
+                    <img src="examples/demo_reverb/3mix/reference/3/050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/3mix/reference/3/050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                    </audio>
+                </td>
+            </tr>
+            <td align="center"> Separation output 1 <br />
+                <img src="examples/demo_reverb/3mix/enh/without_true_numspk/1/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/3mix/enh/without_true_numspk/1/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 2 <br />
+                <img src="examples/demo_reverb/3mix/enh/without_true_numspk/2/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/3mix/enh/without_true_numspk/2/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 3 <br />
+                <img src="examples/demo_reverb/3mix/enh/without_true_numspk/3/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/3mix/enh/without_true_numspk/3/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                </audio>
+            </td>
+            </tr>
+            </tr>
+            <td align="center"> TSE output 1 <br />
+                <img src="examples/demo_reverb/3mix/tse/without_true_numspk/1/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/3mix/tse/without_true_numspk/1/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 2 <br />
+                <img src="examples/demo_reverb/3mix/tse/without_true_numspk/2/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/3mix/tse/without_true_numspk/2/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 3 <br />
+                <img src="examples/demo_reverb/3mix/tse/without_true_numspk/3/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/3mix/tse/without_true_numspk/3/3mix_050_052_421_050a050h_1.0204_052c0108_-1.0204_421o030e_0.wav">
+                </audio>
+            </td>
+            </tr>
+        </table>
+
+        <p><span class="section"><b>Example 4-mix</b></span></p>
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Input mixture <br />
+                    <img src="examples/demo_reverb/4mix/mix/050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/4mix/mix/050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> Reference 1 <br />
+                    <img src="examples/demo_reverb/4mix/reference/1/050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/4mix/reference/1/050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                    </audio>
+                </td>
+                <td align="center"> Reference 2 <br />
+                    <img src="examples/demo_reverb/4mix/reference/2/050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/4mix/reference/2/050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                    </audio>
+                </td>
+                <td align="center"> Reference 3 <br />
+                    <img src="examples/demo_reverb/4mix/reference/3/050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/4mix/reference/3/050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                    </audio>
+                </td>
+                <td align="center"> Reference 4 <br />
+                    <img src="examples/demo_reverb/4mix/reference/4/050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/4mix/reference/4/050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                    </audio>
+                </td>
+            </tr>
+            <td align="center"> Separation output 1 <br />
+                <img src="examples/demo_reverb/4mix/enh/without_true_numspk/1/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/4mix/enh/without_true_numspk/1/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 2 <br />
+                <img src="examples/demo_reverb/4mix/enh/without_true_numspk/2/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/4mix/enh/without_true_numspk/2/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 3 <br />
+                <img src="examples/demo_reverb/4mix/enh/without_true_numspk/3/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/4mix/enh/without_true_numspk/3/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 4 <br />
+                <img src="examples/demo_reverb/4mix/enh/without_true_numspk/4/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/4mix/enh/without_true_numspk/4/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                </audio>
+            </td>
+            </tr>
+            </tr>
+            <td align="center"> TSE output 1 <br />
+                <img src="examples/demo_reverb/4mix/tse/without_true_numspk/1/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/4mix/tse/without_true_numspk/1/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 2 <br />
+                <img src="examples/demo_reverb/4mix/tse/without_true_numspk/2/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/4mix/tse/without_true_numspk/2/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 3 <br />
+                <img src="examples/demo_reverb/4mix/tse/without_true_numspk/3/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/4mix/tse/without_true_numspk/3/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 4 <br />
+                <img src="examples/demo_reverb/4mix/tse/without_true_numspk/4/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/4mix/tse/without_true_numspk/4/4mix_050_053_22h_423_050o020h_2.4117354_053c010a_2.036015_22ha010f_-2.036015_423a010w_-2.4117354.wav">
+                </audio>
+            </td>
+            </tr>
+        </table>
+
+        <p><span class="section"><b>Example 5-mix</b></span></p>
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Input mixture <br />
+                    <img src="examples/demo_reverb/5mix/mix/050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/5mix/mix/050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> Reference 1 <br />
+                    <img src="examples/demo_reverb/5mix/reference/1/050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/5mix/reference/1/050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Reference 2 <br />
+                    <img src="examples/demo_reverb/5mix/reference/2/050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/5mix/reference/2/050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Reference 3 <br />
+                    <img src="examples/demo_reverb/5mix/reference/3/050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/5mix/reference/3/050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Reference 4 <br />
+                    <img src="examples/demo_reverb/5mix/reference/4/050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/5mix/reference/4/050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Reference 5 <br />
+                    <img src="examples/demo_reverb/5mix/reference/5/050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                        width="300" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="examples/demo_reverb/5mix/reference/5/050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                    </audio>
+                </td>
+            </tr>
+            <td align="center"> Separation output 1 <br />
+                <img src="examples/demo_reverb/5mix/enh/without_true_numspk/1/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/5mix/enh/without_true_numspk/1/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 2 <br />
+                <img src="examples/demo_reverb/5mix/enh/without_true_numspk/2/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/5mix/enh/without_true_numspk/2/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 3 <br />
+                <img src="examples/demo_reverb/5mix/enh/without_true_numspk/3/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/5mix/enh/without_true_numspk/3/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 4 <br />
+                <img src="examples/demo_reverb/5mix/enh/without_true_numspk/4/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/5mix/enh/without_true_numspk/4/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                </audio>
+            </td>
+            <td align="center"> Separation output 5 <br />
+                <img src="examples/demo_reverb/5mix/enh/without_true_numspk/5/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/5mix/enh/without_true_numspk/5/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                </audio>
+            </td>
+            </tr>
+            </tr>
+            <td align="center"> TSE output 1 <br />
+                <img src="examples/demo_reverb/5mix/tse/without_true_numspk/1/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/5mix/tse/without_true_numspk/1/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 2 <br />
+                <img src="examples/demo_reverb/5mix/tse/without_true_numspk/2/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/5mix/tse/without_true_numspk/2/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 3 <br />
+                <img src="examples/demo_reverb/5mix/tse/without_true_numspk/3/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/5mix/tse/without_true_numspk/3/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 4 <br />
+                <img src="examples/demo_reverb/5mix/tse/without_true_numspk/4/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/5mix/tse/without_true_numspk/4/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                </audio>
+            </td>
+            <td align="center"> TSE output 5 <br />
+                <img src="examples/demo_reverb/5mix/tse/without_true_numspk/5/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.png"
+                    width="300" alt="" /> <br />
+                <audio controls="">
+                    <source
+                        src="examples/demo_reverb/5mix/tse/without_true_numspk/5/5mix_050_052_053_447_446_050a0514_1.9656248_052c010w_0.74690015_053o020r_-0.74690015_447c0207_-1.9656248_446c020l_0.wav">
+                </audio>
+            </td>
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    </div>
+</body>
+
+</html>
