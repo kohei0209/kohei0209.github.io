@@ -49,14 +49,14 @@ LINE Corporation, Tokyo, Japan
 <u>Kohei Saijo</u>, Wangyou Zhang, Zhong-Qiu Wang, Shinji Watanabe, Tetsunori Kobayashi, and Tetsuji Ogawa, 
 "**A Single Speech Enhancement Model Unifying Dereverberation, Denoising, Speaker Counting, Separation, and Extraction,**" 
 2023 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU), December 2023. (to appear)
-[[Demo page]](https://kohei0209.github.io/muse-demo/)
+[[arXiv]](http://arxiv.org/abs/2310.08277) [[Demo page]](https://kohei0209.github.io/muse-demo/)
 
 ---
 
 <u>Kohei Saijo</u>, Tetsuji Ogawa, 
 "**Remixing-based Unsupervised Source Separation from Scratch,**"
 2023 24th Annual Conference of International Speech Communication Association (INTERSPEECH), August 2023.
-[[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2023/saijo23_interspeech.html)
+[[arXiv]](https://arxiv.org/abs/2309.00376) [[ISCA archive]](https://www.isca-speech.org/archive/interspeech_2023/saijo23_interspeech.html)
 
 ---
 
@@ -175,6 +175,12 @@ from the Acoustical Society of Japan (ASJ)
 <br>
 
 ## <u><font color="DarkOliveGreen">Grants</font></u>
+
+<span style="color: Gray; ">April 2024 - March 2026</span>
+**Research Fellowship for Young Scientists (DC2)**
+from Japan Society for the Promotion of Science (JSPS)
+
+---
 
 <span style="color: Gray; ">April 2023 - March 2026</span>  
 **Support for Pioneering Research Initiated by the Next Generation (SPRING)**
