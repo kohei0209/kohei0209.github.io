@@ -18,10 +18,19 @@ I work on sound source separation.
 
 ## <u><font color="DarkOliveGreen">Experiances</font></u>
 
+---
+
+<span style="color: Gray; ">Nov. 2023 - Present</span>  
+Mitsubishi Electric Research Laboratories, MA, USA
+* Research internship
+* Mentor: [Jonathan Le Roux](https://www.jonathanleroux.org/index.html)
+
+---
+
 <span style="color: Gray; ">Apr. 2023 - July 2023</span>  
 Carnegie Mellon University, Pittsburgh, PA, USA
 * Visiting scholar
-* Worked on **multi-task universal speech enhancement**
+* Worked on [**multi-task universal speech enhancement**](http://arxiv.org/abs/2310.08277)
 * Mentor: [Shinji Watanabe](https://sites.google.com/view/shinjiwatanabe)
 
 ---
@@ -29,7 +38,7 @@ Carnegie Mellon University, Pittsburgh, PA, USA
 <span style="color: Gray; ">Sep. 2021 - Apr. 2022</span>  
 LINE Corporation, Tokyo, Japan
 * Part-time researcher
-* Worked on **unsupervised multi-channel source separation**
+* Worked on [**unsupervised multi-channel source separation**](https://www.isca-speech.org/archive/interspeech_2022/saijo22c_interspeech.html)
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
 ---
@@ -37,7 +46,7 @@ LINE Corporation, Tokyo, Japan
 <span style="color: Gray; ">Aug. 2021 - Sep. 2021</span>  
 LINE Corporation, Tokyo, Japan
 * Research internship
-* Worked on **multi-channel joint source separation and dereverberation**
+* Worked on [**multi-channel joint source separation and dereverberation**](https://www.isca-speech.org/archive/interspeech_2022/saijo22_interspeech.html)
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
 <br>
