@@ -38,7 +38,7 @@ Carnegie Mellon University, Pittsburgh, PA, USA
 <span style="color: Gray; ">Sep. 2021 - Apr. 2022</span>  
 LINE Corporation, Tokyo, Japan
 * Part-time researcher
-* Worked on [**unsupervised multi-channel source separation**](https://www.isca-speech.org/archive/interspeech_2022/saijo22c_interspeech.html)
+* Worked on [**unsupervised multi-channel source separation**](https://www.isca-speech.org/archive/interspeech_2022/saijo22b_interspeech.html)
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
 ---
