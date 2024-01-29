@@ -2,7 +2,7 @@
 
 ### Kohei Saijo / 西城 耕平
 
-1st year Ph.D student in [Media Intelligence Laboratory](http://www.pcl.cs.waseda.ac.jp/) at Waseda University.
+1st year Ph.D student in [Media Intelligence Laboratory](http://www.pcl.cs.waseda.ac.jp/) at Waseda University in Japan.
 I work on sound source separation.
 
 ### Research Interest
@@ -57,7 +57,7 @@ LINE Corporation, Tokyo, Japan
 
 <u>Kohei Saijo</u>, Wangyou Zhang, Zhong-Qiu Wang, Shinji Watanabe, Tetsunori Kobayashi, and Tetsuji Ogawa, 
 "**A Single Speech Enhancement Model Unifying Dereverberation, Denoising, Speaker Counting, Separation, and Extraction,**" 
-2023 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU), December 2023. (to appear)
+2023 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU), December 2023.
 [[arXiv]](http://arxiv.org/abs/2310.08277) [[Demo page]](https://kohei0209.github.io/muse-demo/)
 
 ---
@@ -115,9 +115,15 @@ LINE Corporation, Tokyo, Japan
 
 ### International conference (peer-reviewed, co-author)
 
+Xuankai Chang, Brian Yan, Kwanghee Choi, Jee-weon Jung, Yichen Lu, Soumi Maiti, Roshan Sharma, Jiatong Shi, Jinchuan Tian, Shinji Watanabe, Yuya Fujita, Takashi Maekaku, Pengcheng Guo, Yao-Fei Cheng, Pavel Denisov,<u>Kohei Saijo</u>, and Hsiu-Hsuan Wang
+"**Exploring Speech Recognition, Translation, and Understanding with Discrete Speech Units: A Comparative Study,**"
+2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), April 2024 (to apper). 
+
+---
+
 Wangyou Zhang, <u>Kohei Saijo</u>, Zhong-Qiu Wang, Shinji Watanabe, and Yanmin Qian, 
 "**Toward Universal Speech Enhancement For Diverse Input Conditions,**"
-2023 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU), December 2023. (to appear)
+2023 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU), December 2023.
 
 ---
 
@@ -176,6 +182,10 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 <br>
 
 ## <u><font color="DarkOliveGreen">Awards</font></u>
+
+<span style="color: Gray; ">December 2023</span>  
+**ISS Young Researcher's Award in Speech Field**  
+ISS Young Researcher's Award in Speech Field
 
 <span style="color: Gray; ">March 2022</span>  
 **Best Student Presentation Award**  

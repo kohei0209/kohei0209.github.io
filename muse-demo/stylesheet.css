@@ -1,14 +1,16 @@
 /* @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700'); */
 
 audio {
-    width: 260px;
-    height: 40px;
+  width: 260px;
+  height: 40px;
 }
+
 body {
   font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   background-color: #ddd;
 }
+
 .pageright {
   width: 5%;
   float: right
@@ -17,23 +19,25 @@ body {
 #title {
   margin: 0 5% 0 0;
   padding: 0 5% 2% 4%;
-/*  border-right: 1px dashed #000; */
-/*  border-left: 1px solid #000; */
-/*  background-color: #abc;  */
+  /*  border-right: 1px dashed #000; */
+  /*  border-left: 1px solid #000; */
+  /*  background-color: #abc;  */
 }
 
 .boldbig {
   font-size: 150%;
   font-weight: bold;
 }
+
 .boldbig2 {
   font-size: 150%;
   font-weight: bold;
   margin-bottom: 10px;
   margin-top: 10px;
 }
+
 .main {
-  max-width:1600px;
+  max-width: 1600px;
   margin: auto;
   padding: 2% 5% 5% 5%;
   border-left: 0px solid #999;
@@ -53,28 +57,36 @@ body {
   padding-bottom: 8px;
   width: auto;
 }
+
 .toc_title {
   font-weight: 700;
   font-size: 18pt;
   text-align: left;
 }
-#toc_container ul  {
-  list-style: outside none none !important; margin-left: -40px;
+
+#toc_container ul {
+  list-style: outside none none !important;
+  margin-left: -40px;
 }
+
 .h2_explainer {
   margin-bottom: 2px;
 }
+
 h3 {
-  margin-top: 30px;    
+  margin-top: 30px;
   margin-bottom: 2px;
 }
+
 .h3_explainer {
   padding-bottom: 10px;
   padding-top: 5px;
 }
+
 .transcript {
   font-style: italic;
 }
+
 .text_e2e {
   font-style: italic;
   color: #666666;
@@ -96,20 +108,25 @@ td.reference {
   min-width: 500px;
   max-width: 500px;
 }
+
 td.reference button {
   margin-left: 10px;
 }
+
 td.algorithm {
   text-align: right;
 }
+
 #player {
   position: fixed;
   top: 0;
   right: 0;
 }
+
 td.synthesis {
-    text-align:center;
+  text-align: center;
 }
+
 .center {
   display: block;
   margin-left: auto;
