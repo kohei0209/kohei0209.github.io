@@ -1,0 +1,408 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Self-Remixing</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <!-- <link rel="shortcut icon" href="../../images/taco.png"> -->
+    <script>
+        function play(path) {
+            {
+                var player = document.getElementById('player');
+                player.src = path;
+                player.play();
+            }
+        }
+    </script>
+    <style>
+        .audio-cell {
+            /* Center audio widgets in the table cell. */
+            text-align: center;
+            padding-bottom: 1px;
+            padding-top: 1px;
+        }
+
+        .audio-cell-padded {
+            text-align: center;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .audio-header {
+            /* Don't wrap header text. */
+            white-space: nowrap;
+            /* Some breaking space between headers for readability. */
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        .reference-cell {
+            /* For uniformity and to wrap long reference text, limit the reference cell's width. */
+            width: 25%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .sample audio {
+            vertical-align: middle;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        .round-button {
+            box-sizing: border-box;
+            display: block;
+            width: 30px;
+            height: 30px;
+            padding-top: 8px;
+            padding-left: 3px;
+            line-height: 6px;
+            border: 1.2px solid #000;
+            border-radius: 50%;
+            color: #000;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.00);
+            font-size: 6px;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+            transition: all 0.2s ease;
+        }
+
+        .round-button:hover {
+            background-color: rgba(0, 0, 0, 0.0);
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+        }
+
+        .round-button:active {
+            background-color: rgba(0, 0, 0, 0.01);
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <article>
+            <header>
+                <h1>Audio examples from WSJ-mix dataset </h1>
+            </header>
+        </article>
+
+        <p>
+        <ul>
+            <li><a href="#orig_data">Data </a><br></li>
+            <li><a href="#mixit">MixIT (TF-GridNet) </a><br></li>
+            <li><a href="#remixit+cs">RemixIT w/ CS (TF-GridNet)</a><br></li>
+            <li><a href="#selfremixing+cs">Self-REmixing w/ CS (TF-GridNet)</a><br></li>
+            <li><a href="#remixit">RemixIT w/o CS (TF-GridNet)</a><br></li>
+            <li><a href="#selfremixing">Self-Remixing w/ CS -> w/o CS (TF-GridNet)</a><br></li>
+        </ul>
+        </p>
+        <p><b>NOTE:</b>
+            Output order of the three separated signals are aligned with the ground-truth audios (two speech and a
+            noise).
+        </p>
+
+        <p><span class="section">
+                <h2 id="orig_data">Input mixture and clean speeches</h2>
+            </span></p>
+
+        <table align="center" style="width:70%" border="1" cellpadding="15">
+            <tr>
+                <td align="center"> Mixture 1 <br />
+                    <img src="wsjmix/orig_data/0_442c040o_443c040g/0_442c040o_443c040g.png" width="350" alt="" /> <br />
+                    <audio controls="">
+                        <source src="wsjmix/orig_data/0_442c040o_443c040g/0_442c040o_443c040g.wav">
+                    </audio>
+                </td>
+                <td align="center"> Mixture 2 <br />
+                    <img src="wsjmix/orig_data/85_445c040k_441c040a/85_445c040k_441c040a.png" width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="wsjmix/orig_data/85_445c040k_441c040a/85_445c040k_441c040a.wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
+
+        <table align="center" style="width:70%" border="1" cellpadding="15">
+            <tr>
+                <td align="center"> Mixture 1 Clean speech1 <br />
+                    <img src="wsjmix/orig_data/0_442c040o_443c040g/0_442c040o_443c040g_0_0.png" width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="wsjmix/orig_data/0_442c040o_443c040g/0_442c040o_443c040g_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Mixture 1 Clean speech2 <br />
+                    <img src="wsjmix/orig_data/0_442c040o_443c040g/0_442c040o_443c040g_1_1.png" width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="wsjmix/orig_data/0_442c040o_443c040g/0_442c040o_443c040g_1.wav">
+                    </audio>
+                </td>
+
+                <td align="center"> Mixture 2 Clean speech1 <br />
+                    <img src="wsjmix/orig_data/85_445c040k_441c040a/85_445c040k_441c040a_0_0.png" width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="wsjmix/orig_data/85_445c040k_441c040a/85_445c040k_441c040a_0.wav">
+                    </audio>
+                </td>
+
+                <td align="center"> Mixture 2 Clean speech2 <br />
+                    <img src="wsjmix/orig_data/85_445c040k_441c040a/85_445c040k_441c040a_1_1.png" width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="wsjmix/orig_data/85_445c040k_441c040a/85_445c040k_441c040a_1.wav">
+                    </audio>
+                </td>
+
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <p><span class="section">
+                <h2 id="mixit">MixIT</h2>
+            </span></p>
+
+        <table align="center" style="width:70%" border="1" cellpadding="15">
+            <tr>
+                <td align="center"> Mixture 1 Estimated speech1 <br />
+                    <img src="wsjmix/tfgridnet_efficient_mixit_mrl1_ks4hs4_woamp_nolog/0_442c040o_443c040g/0_442c040o_443c040g_0.png"
+                        width="350" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_efficient_mixit_mrl1_ks4hs4_woamp_nolog/0_442c040o_443c040g/0_442c040o_443c040g_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Mixture 1 Estimated speech2 <br />
+                    <img src="wsjmix/tfgridnet_efficient_mixit_mrl1_ks4hs4_woamp_nolog/0_442c040o_443c040g/0_442c040o_443c040g_1.png"
+                        width="350" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_efficient_mixit_mrl1_ks4hs4_woamp_nolog/0_442c040o_443c040g/0_442c040o_443c040g_1.wav">
+                    </audio>
+                </td>
+
+                <td align="center"> Mixture 2 Estimated speech1 <br />
+                    <img src="wsjmix/tfgridnet_efficient_mixit_mrl1_ks4hs4_woamp_nolog/85_445c040k_441c040a/85_445c040k_441c040a_0.png"
+                        width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_efficient_mixit_mrl1_ks4hs4_woamp_nolog/85_445c040k_441c040a/85_445c040k_441c040a_0.wav">
+                    </audio>
+                </td>
+
+                <td align="center"> Mixture 2 Estimated speech2 <br />
+                    <img src="wsjmix/tfgridnet_efficient_mixit_mrl1_ks4hs4_woamp_nolog/85_445c040k_441c040a/85_445c040k_441c040a_1.png"
+                        width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_efficient_mixit_mrl1_ks4hs4_woamp_nolog/85_445c040k_441c040a/85_445c040k_441c040a_1.wav">
+                    </audio>
+                </td>
+
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <p><span class="section">
+                <h2 id="remixit+cs">RemixIT w/ CS</h2>
+            </span></p>
+
+        <table align="center" style="width:70%" border="1" cellpadding="15">
+            <tr>
+                <td align="center"> Mixture 1 Estimated speech1 <br />
+                    <img src="wsjmix/tfgridnet_remixit_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/0_442c040o_443c040g/0_442c040o_443c040g_0.png"
+                        width="350" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_remixit_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/0_442c040o_443c040g/0_442c040o_443c040g_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Mixture 1 Estimated speech2 <br />
+                    <img src="wsjmix/tfgridnet_remixit_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/0_442c040o_443c040g/0_442c040o_443c040g_1.png"
+                        width="350" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_remixit_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/0_442c040o_443c040g/0_442c040o_443c040g_1.wav">
+                    </audio>
+                </td>
+
+                <td align="center"> Mixture 2 Estimated speech1 <br />
+                    <img src="wsjmix/tfgridnet_remixit_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/85_445c040k_441c040a/85_445c040k_441c040a_0.png"
+                        width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_remixit_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/85_445c040k_441c040a/85_445c040k_441c040a_0.wav">
+                    </audio>
+                </td>
+
+                <td align="center"> Mixture 2 Estimated speech2 <br />
+                    <img src="wsjmix/tfgridnet_remixit_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/85_445c040k_441c040a/85_445c040k_441c040a_1.png"
+                        width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_remixit_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/85_445c040k_441c040a/85_445c040k_441c040a_1.wav">
+                    </audio>
+                </td>
+
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <p><span class="section">
+                <h2 id="selfremixing+cs">Self-Remixing w/ CS</h2>
+            </span></p>
+
+        <table align="center" style="width:70%" border="1" cellpadding="15">
+            <tr>
+                <td align="center"> Mixture 1 Estimated speech1 <br />
+                    <img src="wsjmix/tfgridnet_selfremixing_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/0_442c040o_443c040g/0_442c040o_443c040g_0.png"
+                        width="350" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_selfremixing_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/0_442c040o_443c040g/0_442c040o_443c040g_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Mixture 1 Estimated speech2 <br />
+                    <img src="wsjmix/tfgridnet_selfremixing_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/0_442c040o_443c040g/0_442c040o_443c040g_1.png"
+                        width="350" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_selfremixing_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/0_442c040o_443c040g/0_442c040o_443c040g_1.wav">
+                    </audio>
+                </td>
+
+                <td align="center"> Mixture 2 Estimated speech1 <br />
+                    <img src="wsjmix/tfgridnet_selfremixing_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/85_445c040k_441c040a/85_445c040k_441c040a_0.png"
+                        width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_selfremixing_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/85_445c040k_441c040a/85_445c040k_441c040a_0.wav">
+                    </audio>
+                </td>
+
+                <td align="center"> Mixture 2 Estimated speech2 <br />
+                    <img src="wsjmix/tfgridnet_selfremixing_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/85_445c040k_441c040a/85_445c040k_441c040a_1.png"
+                        width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_selfremixing_mrl1_randomall_ks4hs4_woamp_weight0.8_nolog/85_445c040k_441c040a/85_445c040k_441c040a_1.wav">
+                    </audio>
+                </td>
+
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <p><span class="section">
+                <h2 id="remixit">RemixIT w/o CS</h2>
+            </span></p>
+
+        <table align="center" style="width:70%" border="1" cellpadding="15">
+            <tr>
+                <td align="center"> Mixture 1 Estimated speech1 <br />
+                    <img src="wsjmix/tfgridnet_remixit_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog/0_442c040o_443c040g/0_442c040o_443c040g_0.png"
+                        width="350" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_remixit_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog/0_442c040o_443c040g/0_442c040o_443c040g_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Mixture 1 Estimated speech2 <br />
+                    <img src="wsjmix/tfgridnet_remixit_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog/0_442c040o_443c040g/0_442c040o_443c040g_1.png"
+                        width="350" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_remixit_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog/0_442c040o_443c040g/0_442c040o_443c040g_1.wav">
+                    </audio>
+                </td>
+
+                <td align="center"> Mixture 2 Estimated speech1 <br />
+                    <img src="wsjmix/tfgridnet_remixit_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog/85_445c040k_441c040a/85_445c040k_441c040a_0.png"
+                        width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_remixit_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog/85_445c040k_441c040a/85_445c040k_441c040a_0.wav">
+                    </audio>
+                </td>
+
+                <td align="center"> Mixture 2 Estimated speech2 <br />
+                    <img src="wsjmix/tfgridnet_remixit_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog/85_445c040k_441c040a/85_445c040k_441c040a_1.png"
+                        width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_remixit_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog/85_445c040k_441c040a/85_445c040k_441c040a_1.wav">
+                    </audio>
+                </td>
+
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+        <p><span class="section">
+                <h2 id="selfremixing">Self-Remixing w/o CS</h2>
+            </span></p>
+
+        <table align="center" style="width:70%" border="1" cellpadding="15">
+            <tr>
+                <td align="center"> Mixture 1 Estimated speech1 <br />
+                    <img src="wsjmix/tfgridnet_selfremixing_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog_randomall150epoch_lr5e-4/0_442c040o_443c040g/0_442c040o_443c040g_0.png"
+                        width="350" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_selfremixing_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog_randomall150epoch_lr5e-4/0_442c040o_443c040g/0_442c040o_443c040g_0.wav">
+                    </audio>
+                </td>
+                <td align="center"> Mixture 1 Estimated speech2 <br />
+                    <img src="wsjmix/tfgridnet_selfremixing_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog_randomall150epoch_lr5e-4/0_442c040o_443c040g/0_442c040o_443c040g_1.png"
+                        width="350" alt="" /> <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_selfremixing_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog_randomall150epoch_lr5e-4/0_442c040o_443c040g/0_442c040o_443c040g_1.wav">
+                    </audio>
+                </td>
+
+                <td align="center"> Mixture 2 Estimated speech1 <br />
+                    <img src="wsjmix/tfgridnet_selfremixing_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog_randomall150epoch_lr5e-4/85_445c040k_441c040a/85_445c040k_441c040a_0.png"
+                        width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_selfremixing_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog_randomall150epoch_lr5e-4/85_445c040k_441c040a/85_445c040k_441c040a_0.wav">
+                    </audio>
+                </td>
+
+                <td align="center"> Mixture 2 Estimated speech2 <br />
+                    <img src="wsjmix/tfgridnet_selfremixing_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog_randomall150epoch_lr5e-4/85_445c040k_441c040a/85_445c040k_441c040a_1.png"
+                        width="350" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source
+                            src="wsjmix/tfgridnet_selfremixing_mrl1_randombatch_ks4hs4_woamp_weight0.8_nolog_randomall150epoch_lr5e-4/85_445c040k_441c040a/85_445c040k_441c040a_1.wav">
+                    </audio>
+                </td>
+
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+    </div>
+</body>
+
+</html>
