@@ -1,0 +1,215 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>URGENT ICASSP2025 Challenge - Audio Examples</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <!-- <link rel="shortcut icon" href="../../images/taco.png"> -->
+    <script>
+        function play(path) {
+            {
+                var player = document.getElementById('player');
+                player.src = path;
+                player.play();
+            }
+        }
+    </script>
+    <style>
+        .audio-cell {
+            /* Center audio widgets in the table cell. */
+            text-align: center;
+            padding-bottom: 1px;
+            padding-top: 1px;
+        }
+
+        .audio-cell-padded {
+            text-align: center;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .audio-header {
+            /* Don't wrap header text. */
+            white-space: nowrap;
+            /* Some breaking space between headers for readability. */
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        .reference-cell {
+            /* For uniformity and to wrap long reference text, limit the reference cell's width. */
+            width: 25%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .sample audio {
+            vertical-align: middle;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        .round-button {
+            box-sizing: border-box;
+            display: block;
+            width: 30px;
+            height: 30px;
+            padding-top: 8px;
+            padding-left: 3px;
+            line-height: 6px;
+            border: 1.2px solid #000;
+            border-radius: 50%;
+            color: #000;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.00);
+            font-size: 6px;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+            transition: all 0.2s ease;
+        }
+
+        .round-button:hover {
+            background-color: rgba(0, 0, 0, 0.0);
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+        }
+
+        .round-button:active {
+            background-color: rgba(0, 0, 0, 0.01);
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <article>
+            <header>
+                <h1>URGENT ICASSP2025 Challenge - Audio Examples </h1>
+            </header>
+        </article>
+
+        <h2>
+            Contents:
+        </h2>
+        <p>
+            <a href="#loudness_transition">Audio examples of loudness transition</a><br>
+            <a href="#nonflat_fequency_responce">Audio examples of non-flat frequency response</a><br>
+            <a href="#packet_loss">Audio examples of packet loss</a><br>
+            <a href="#codec_loss">Audio examples of codec lossy compression</a><br>
+            <a href="#wind_noise">Audio examples of wind noise</a><br>
+        </p>
+
+
+        <h2 id="loudness_transition">Loudness transition</h2>
+
+        <table style="width:100%">
+            <tr>
+                </td>
+                <td align="center"> Clean speech <br />
+                    <img src="examples/spectrograms/clean.png" width="800" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/wavs/p254_022.wav">
+                    </audio>
+                </td>
+                <td align="center"> Speech with loudness transition <br />
+                    <img src="examples/spectrograms/loudness_transition.png" width="800" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/wavs/output_loudness_transition.wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
+
+        <!-------------------------------------------------------------------------------------------------->
+
+        <h2 id="nonflat_freuquency_responce">Non-flat frequency response</h2>
+
+        <table style="width:100%">
+            <tr>
+                </td>
+                <td align="center"> Clean speech <br />
+                    <img src="examples/spectrograms/clean.png" width="800" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/wavs/p254_022.wav">
+                    </audio>
+                </td>
+                <td align="center"> Speech distorted by non-flat frequency response <br />
+                    <img src="examples/spectrograms/nonflat_freqres.png" width="800" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/wavs/output_nonflat_freqres.wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
+
+        <!-------------------------------------------------------------------------------------------------->
+
+        <h2 id="packet_loss">Packet loss</h2>
+
+        <table style="width:100%">
+            <tr>
+                </td>
+                <td align="center"> Clean speech <br />
+                    <img src="examples/spectrograms/clean.png" width="800" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/wavs/p254_022.wav">
+                    </audio>
+                </td>
+                <td align="center"> Speech with packet losses <br />
+                    <img src="examples/spectrograms/packet_loss.png" width="800" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/wavs/output_packet_loss.wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
+
+        <!-------------------------------------------------------------------------------------------------->
+
+        <h2 id="codec_loss">Codec lossy compression (MP3)</h2>
+
+        <table style="width:100%">
+            <tr>
+                </td>
+                <td align="center"> Clean speech <br />
+                    <img src="examples/spectrograms/clean.png" width="800" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/wavs/p254_022.wav">
+                    </audio>
+                </td>
+                <td align="center"> Speech distorted by codec lossy compression <br />
+                    <img src="examples/spectrograms/mp3.png" width="800" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/wavs/output_mp3codec.wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
+
+        <!-------------------------------------------------------------------------------------------------->
+
+        <h2 id="wind_noise">Wind noise</h2>
+
+        <table style="width:100%">
+            <tr>
+                </td>
+                <td align="center"> Clean speech <br />
+                    <img src="examples/spectrograms/clean.png" width="800" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/wavs/p254_022.wav">
+                    </audio>
+                </td>
+                <td align="center"> Speech with wind noise <br />
+                    <img src="examples/spectrograms/windnoise_clipping.png" width="800" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/wavs/output_windnoise_clipping.wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
+
+        <!-------------------------------------------------------------------------------------------------->
+
+    </div>
+</body>
+
+</html>
