@@ -87,6 +87,14 @@
             </header>
         </article>
 
+        <p><b>Abstract:</b>
+            This page provides some audio examples of speech distortions we focus on in the URGENT ICASSP2025 Challenge.
+            Each example has clean speech, distorted speech, and enhanced speech.
+            Note that the enhancement model does not work well, as we used the baseline model trained for the "URGENT
+            Challenge 2024", for which all the distortions in this page are unseen.
+            This result calls for a more universal, robust, and generalizable model.
+        </p>
+
         <h2>
             Contents:
         </h2>
@@ -98,110 +106,182 @@
             <a href="#wind_noise">Audio examples of wind noise</a><br>
         </p>
 
-
+        <br>
         <h2 id="loudness_transition">Loudness transition</h2>
+        <p class="text-indent">Loudness transition naturally happens when people speak.
+            The volume of their voice changes based on emotions or points of emphasis.
+            In addition, each person has a unique speaking style, which can also affect loudness transitions.
+            For instance, some people naturally lower their voice at the end of sentences.
+        </p>
+        <p class="text-indent">
+            In the following example, the speaker emphasizes his speech at the middle while lower the volume at the end
+            of
+            utterance, which makes it difficult to hear.
+            Enhancement model just outputs the input as it is since the model is not trained for controlling the gain.
+        </p>
 
         <table style="width:100%">
             <tr>
                 </td>
                 <td align="center"> Clean speech <br />
-                    <img src="examples/spectrograms/clean.png" width="800" alt="" /> <br />
+                    <img src="examples/spectrograms/clean.png" width="400" alt="" /> <br />
                     <audio controls="">
                         <source src="examples/wavs/p254_022.wav">
                     </audio>
                 </td>
                 <td align="center"> Speech with loudness transition <br />
-                    <img src="examples/spectrograms/loudness_transition.png" width="800" alt="" /> <br />
+                    <img src="examples/spectrograms/loudness_transition.png" width="400" alt="" /> <br />
                     <audio controls="">
                         <source src="examples/wavs/output_loudness_transition.wav">
+                    </audio>
+                </td>
+                <td align="center"> Enhanced speech <br />
+                    <img src="examples/spectrograms/enhanced_loudness_transition.png" width="400" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/enhanced/enhanced_output_loudness_transition.wav">
                     </audio>
                 </td>
             </tr>
         </table>
 
         <!-------------------------------------------------------------------------------------------------->
-
+        <br><br>
         <h2 id="nonflat_freuquency_responce">Non-flat frequency response</h2>
+
+        <p class="text-indent">Frequency responce can sometimes be non-flat due to speaker or microphone
+            characteristics.
+        </p>
+        <p class="text-indent">
+            In the following example, we simulated the non-flat frequency response assuming that the microphone has low
+            responce for low frequencies and a peaky responce around 4000Hz, which significantly changes the speech.
+        </p>
 
         <table style="width:100%">
             <tr>
                 </td>
                 <td align="center"> Clean speech <br />
-                    <img src="examples/spectrograms/clean.png" width="800" alt="" /> <br />
+                    <img src="examples/spectrograms/clean.png" width="400" alt="" /> <br />
                     <audio controls="">
                         <source src="examples/wavs/p254_022.wav">
                     </audio>
                 </td>
                 <td align="center"> Speech distorted by non-flat frequency response <br />
-                    <img src="examples/spectrograms/nonflat_freqres.png" width="800" alt="" /> <br />
+                    <img src="examples/spectrograms/nonflat_freqres.png" width="400" alt="" /> <br />
                     <audio controls="">
                         <source src="examples/wavs/output_nonflat_freqres.wav">
+                    </audio>
+                </td>
+                <td align="center"> Enhanced speech <br />
+                    <img src="examples/spectrograms/enhanced_nonflat_freqres.png" width="400" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/enhanced/enhanced_output_nonflat_freqres.wav">
                     </audio>
                 </td>
             </tr>
         </table>
 
         <!-------------------------------------------------------------------------------------------------->
-
+        <br><br>
         <h2 id="packet_loss">Packet loss</h2>
+
+        <p class="text-indent">
+            Packet loss can happens in the online meeting systems due to the busy network traffic.
+            When packet loss happens, the audio becomes choppy.
+            We want to restore the lost speech using a speech enhancement model.
+        </p>
 
         <table style="width:100%">
             <tr>
                 </td>
                 <td align="center"> Clean speech <br />
-                    <img src="examples/spectrograms/clean.png" width="800" alt="" /> <br />
+                    <img src="examples/spectrograms/clean.png" width="400" alt="" /> <br />
                     <audio controls="">
                         <source src="examples/wavs/p254_022.wav">
                     </audio>
                 </td>
                 <td align="center"> Speech with packet losses <br />
-                    <img src="examples/spectrograms/packet_loss.png" width="800" alt="" /> <br />
+                    <img src="examples/spectrograms/packet_loss.png" width="400" alt="" /> <br />
                     <audio controls="">
                         <source src="examples/wavs/output_packet_loss.wav">
+                    </audio>
+                </td>
+                <td align="center"> Enhanced speech <br />
+                    <img src="examples/spectrograms/enhanced_packet_loss.png" width="400" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/enhanced/enhanced_output_packet_loss.wav">
                     </audio>
                 </td>
             </tr>
         </table>
 
         <!-------------------------------------------------------------------------------------------------->
-
+        <br><br>
         <h2 id="codec_loss">Codec lossy compression (MP3)</h2>
+
+        <p class="text-indent">
+            Some audio codecs are lossy compression, and some components in the original audio are lost, as you can see
+            in the example below,
+            We want to restore the lost part using a speech enhancement model.
+        </p>
 
         <table style="width:100%">
             <tr>
                 </td>
                 <td align="center"> Clean speech <br />
-                    <img src="examples/spectrograms/clean.png" width="800" alt="" /> <br />
+                    <img src="examples/spectrograms/clean.png" width="400" alt="" /> <br />
                     <audio controls="">
                         <source src="examples/wavs/p254_022.wav">
                     </audio>
                 </td>
                 <td align="center"> Speech distorted by codec lossy compression <br />
-                    <img src="examples/spectrograms/mp3.png" width="800" alt="" /> <br />
+                    <img src="examples/spectrograms/mp3.png" width="400" alt="" /> <br />
                     <audio controls="">
                         <source src="examples/wavs/output_mp3codec.wav">
+                    </audio>
+                </td>
+                <td align="center"> Enhanced speech <br />
+                    <img src="examples/spectrograms/enhancedmp3.png" width="400" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/enhanced/enhanced_output_mp3codec.wav">
                     </audio>
                 </td>
             </tr>
         </table>
 
         <!-------------------------------------------------------------------------------------------------->
-
+        <br><br>
         <h2 id="wind_noise">Wind noise</h2>
+
+        <p class="text-indent">
+            Wind noise is non-stational noise and behaves turbulently near microphones.
+            Wind noise distorts sound in a non-linear way because the airflow moves the microphone membrane and causes
+            saturation at high noise levels.
+        </p>
+
+        <p class="text-indent">
+            In the following example, enhancement model generalizes to unseen wind noise to some extent, but still there
+            is room for improvment.
+        </p>
 
         <table style="width:100%">
             <tr>
                 </td>
                 <td align="center"> Clean speech <br />
-                    <img src="examples/spectrograms/clean.png" width="800" alt="" /> <br />
+                    <img src="examples/spectrograms/clean.png" width="400" alt="" /> <br />
                     <audio controls="">
                         <source src="examples/wavs/p254_022.wav">
                     </audio>
                 </td>
                 <td align="center"> Speech with wind noise <br />
-                    <img src="examples/spectrograms/windnoise_clipping.png" width="800" alt="" /> <br />
+                    <img src="examples/spectrograms/windnoise_clipping.png" width="400" alt="" /> <br />
                     <audio controls="">
                         <source src="examples/wavs/output_windnoise_clipping.wav">
+                    </audio>
+                </td>
+                <td align="center"> Speech with wind noise <br />
+                    <img src="examples/spectrograms/enhanced_windnoise_clipping.png" width="400" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/enhanced/enhanced_output_windnoise_clipping.wav">
                     </audio>
                 </td>
             </tr>
