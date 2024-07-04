@@ -2,11 +2,12 @@
 
 ### Kohei Saijo / 西城 耕平
 
-1st year Ph.D student in [Media Intelligence Laboratory](http://www.pcl.cs.waseda.ac.jp/) at Waseda University in Japan.
-I work on sound source separation.
+2nd year Ph.D student in [Media Intelligence Laboratory](http://www.pcl.cs.waseda.ac.jp/) at Waseda University in Japan.
+Working on speech enhancement and source separation.
 
 ### Research Interest
 * Unsupervised Source Separation
+* Universal speech enhancement
 * Multi-channel Source Separation
  
 
@@ -53,6 +54,12 @@ LINE Corporation, Tokyo, Japan
 ## <u><font color="DarkOliveGreen">Publications</font></u>
 
 ### International conference (peer-reviewed, first author)
+
+<u>Kohei Saijo</u>, Gordon Wichern, François G. Germain, Zexu Pan, and Jonathan Le Roux,
+"**Enhanced Reverberation as Supervision for Unsupervised Speech Separation,**"
+2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024 (to appear).
+
+---
 
 <u>Kohei Saijo</u>, Wangyou Zhang, Zhong-Qiu Wang, Shinji Watanabe, Tetsunori Kobayashi, and Tetsuji Ogawa, 
 "**A Single Speech Enhancement Model Unifying Dereverberation, Denoising, Speaker Counting, Separation, and Extraction,**" 
@@ -114,9 +121,27 @@ LINE Corporation, Tokyo, Japan
 
 ### International conference (peer-reviewed, co-author)
 
+Zexu Pan, Gordon Wichern, François G. Germain, <u>Kohei Saijo</u> and Jonathan Le Roux,
+"**PARIS: Pseudo-AutoRegressIve Siamese Training for Online Speech Separation,**"
+2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024 (to appear).
+
+---
+
+Wangyou Zhang, Robin Scheibler, Kohei Saijo, Samuele Cornell, Chenda Li, Zhaoheng Ni, Anurag Kumar, Jan Pirklbauer, Marvin Sach, Shinji Watanabe, Tim Fingscheidt, and Yanmin Qian,
+"**URGENT Challenge: Universality, Robustness, and Generalizability For Speech Enhancement,**"
+2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024 (to appear).
+
+---
+
+Wangyou Zhang, <u>Kohei Saijo</u>, Jee-weon Jung, Chenda Li, Shinji Watanabe, and Yanmin Qian,
+"**Beyond Performance Plateaus: A Comprehensive Study on Scalability in Speech Enhancement,**"
+2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024 (to appear).
+
+---
+
 Xuankai Chang, Brian Yan, Kwanghee Choi, Jee-weon Jung, Yichen Lu, Soumi Maiti, Roshan Sharma, Jiatong Shi, Jinchuan Tian, Shinji Watanabe, Yuya Fujita, Takashi Maekaku, Pengcheng Guo, Yao-Fei Cheng, Pavel Denisov,<u>Kohei Saijo</u>, and Hsiu-Hsuan Wang
 "**Exploring Speech Recognition, Translation, and Understanding with Discrete Speech Units: A Comparative Study,**"
-2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), April 2024 (to apper). 
+2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), April 2024. 
 
 ---
 
