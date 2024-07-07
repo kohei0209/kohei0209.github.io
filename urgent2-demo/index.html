@@ -83,16 +83,19 @@
     <div class="main">
         <article>
             <header>
-                <h1>URGENT ICASSP2025 Challenge - Audio Examples </h1>
+                <h1>ICASSP2025 URGENT Challenge - Audio Examples </h1>
             </header>
         </article>
 
         <p><b>Abstract:</b>
-            This page provides some audio examples of speech distortions we focus on in the URGENT ICASSP2025 Challenge.
+            This page provides some audio examples of speech distortions we focus on in the ICASSP2025 URGENT Challenge.
             Each example has clean speech, distorted speech, and enhanced speech.
-            Note that the enhancement model does not work well, as we used the baseline model trained for the "URGENT
-            Challenge 2024", for which all the distortions in this page are unseen.
-            This result calls for a more universal, robust, and generalizable model.
+            The enhanced speech is obtained using the baseline model trained for the "URGENT Challenge 2024", which did
+            not see disrotions considered in the URGENT ICASSP2025 challenge.
+            <b>Unfortunately, the model does not generalize well for unseen distortions.
+                This motivates us to organize the ICASSP2025 URGENT Challenge, which considers
+                more diverse types of distortions and to aims to build a more universal, robust, and
+                generalizable speech enhancement model.</b>
         </p>
 
         <h2>
@@ -185,7 +188,7 @@
         <h2 id="packet_loss">Packet loss</h2>
 
         <p class="text-indent">
-            Packet loss can happens in the online meeting systems due to the busy network traffic.
+            Packet loss can happen in the online meeting systems due to the busy network traffic.
             When packet loss happens, the audio becomes choppy.
             We want to restore the lost speech using a speech enhancement model.
         </p>
