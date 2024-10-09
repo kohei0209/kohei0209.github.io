@@ -6,9 +6,9 @@
 Working on speech enhancement and source separation.
 
 ### Research Interest
-* Unsupervised Source Separation
+* Unsupervised source separation
 * Universal speech enhancement
-* Multi-channel Source Separation
+* Multi-channel source separation
  
 
 [Google Scholar](https://scholar.google.com/citations?user=ptyPzY4AAAAJ&hl=ja&oi=ao) | 
@@ -20,9 +20,17 @@ Working on speech enhancement and source separation.
 
 ## <u><font color="DarkOliveGreen">Experiances</font></u>
 
-<span style="color: Gray; ">Nov. 2023 - Present</span>  
+<span style="color: Gray; ">Oct. 2024 - Present</span>  
+National Institute of Advanced Industrial Science and Technology (AIST), Tokyo, Japan
+* Research assistant
+* Mentor: [Yoshiaki Bando](https://www.ybando.jp/)
+
+---
+
+<span style="color: Gray; ">Nov. 2023 - Aug. 2024</span>  
 Mitsubishi Electric Research Laboratories, MA, USA
 * Research internship
+* Worked on [**unsupervised speech separation**](https://www.isca-archive.org/interspeech_2024/saijo24_interspeech.html), [**state-of-the-art speech separation model**](https://arxiv.org/abs/2408.03440), and [**text-queried target sound extraction**](https://arxiv.org/abs/2409.13152).
 * Mentor: [Jonathan Le Roux](https://www.jonathanleroux.org/index.html)
 
 ---
@@ -54,6 +62,12 @@ LINE Corporation, Tokyo, Japan
 ## <u><font color="DarkOliveGreen">Publications</font></u>
 
 ### International conference (peer-reviewed, first author)
+
+<u>Kohei Saijo</u>, Gordon Wichern, François G. Germain, Zexu Pan, and Jonathan Le Roux,
+"**TF-Locoformer: Transformer with Local Modeling by Convolution for Speech Separation and Enhancement,**"
+International Workshop on Acoustic Signal Enhancement (IWAENC), Sept. 2024 [[arXiv]](https://arxiv.org/abs/2408.03440) [[Code]](https://github.com/merlresearch/tf-locoformer).
+
+---
 
 <u>Kohei Saijo</u>, Gordon Wichern, François G. Germain, Zexu Pan, and Jonathan Le Roux,
 "**Enhanced Reverberation as Supervision for Unsupervised Speech Separation,**"
@@ -227,7 +241,7 @@ from Japan Society for the Promotion of Science (JSPS)
 
 ---
 
-<span style="color: Gray; ">April 2023 - March 2026</span>  
+<span style="color: Gray; ">April 2023 - March 2024</span>  
 **Support for Pioneering Research Initiated by the Next Generation (SPRING)**
 from Japan Science and Technology Agency (JST)
 
