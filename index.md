@@ -11,7 +11,7 @@ Working on speech enhancement and source separation.
 * Multi-channel source separation
  
 
-[Google Scholar](https://scholar.google.com/citations?user=ptyPzY4AAAAJ&hl=ja&oi=ao) | 
+[Google Scholar](https://scholar.google.com/citations?user=ptyPzY4AAAAJ&hl=en) | 
 [GitHub](https://github.com/kohei0209) | 
 [Twitter](https://twitter.com/kohei_1979) |
 [CV](./saijo_curriculum_vitae.pdf)
@@ -65,20 +65,20 @@ LINE Corporation, Tokyo, Japan
 
 <u>Kohei Saijo</u>, Gordon Wichern, François G. Germain, Zexu Pan, and Jonathan Le Roux,
 "**TF-Locoformer: Transformer with Local Modeling by Convolution for Speech Separation and Enhancement,**"
-International Workshop on Acoustic Signal Enhancement (IWAENC), Sept. 2024 [[arXiv]](https://arxiv.org/abs/2408.03440) [[Code]](https://github.com/merlresearch/tf-locoformer).
+International Workshop on Acoustic Signal Enhancement (IWAENC), Sept. 2024. [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/10694313) [[arXiv]](https://arxiv.org/abs/2408.03440) [[Code]](https://github.com/merlresearch/tf-locoformer)
 
 ---
 
 <u>Kohei Saijo</u>, Gordon Wichern, François G. Germain, Zexu Pan, and Jonathan Le Roux,
 "**Enhanced Reverberation as Supervision for Unsupervised Speech Separation,**"
-2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024 (to appear).
+2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024. [[ISCA archive]](https://www.isca-archive.org/interspeech_2024/saijo24_interspeech.html#) [[Code]](https://github.com/merlresearch/reverberation-as-supervision)
 
 ---
 
 <u>Kohei Saijo</u>, Wangyou Zhang, Zhong-Qiu Wang, Shinji Watanabe, Tetsunori Kobayashi, and Tetsuji Ogawa, 
 "**A Single Speech Enhancement Model Unifying Dereverberation, Denoising, Speaker Counting, Separation, and Extraction,**" 
 2023 IEEE Automatic Speech Recognition and Understanding Workshop (ASRU), December 2023.
-[[arXiv]](http://arxiv.org/abs/2310.08277) [[Code]](https://github.com/kohei0209/espnet/tree/muse/egs2/wsj0_Nmix) [[Demo page]](https://kohei0209.github.io/muse-demo/)
+[[arXiv]](http://arxiv.org/abs/2310.08277) [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/10389724) [[Code]](https://github.com/kohei0209/espnet/tree/muse/egs2/wsj0_Nmix) [[Demo page]](https://kohei0209.github.io/muse-demo/)
 
 ---
 
@@ -137,19 +137,19 @@ International Workshop on Acoustic Signal Enhancement (IWAENC), Sept. 2024 [[arX
 
 Zexu Pan, Gordon Wichern, François G. Germain, <u>Kohei Saijo</u> and Jonathan Le Roux,
 "**PARIS: Pseudo-AutoRegressIve Siamese Training for Online Speech Separation,**"
-2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024 (to appear).
+2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024.
 
 ---
 
 Wangyou Zhang, Robin Scheibler, Kohei Saijo, Samuele Cornell, Chenda Li, Zhaoheng Ni, Anurag Kumar, Jan Pirklbauer, Marvin Sach, Shinji Watanabe, Tim Fingscheidt, and Yanmin Qian,
 "**URGENT Challenge: Universality, Robustness, and Generalizability For Speech Enhancement,**"
-2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024 (to appear).
+2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024.
 
 ---
 
 Wangyou Zhang, <u>Kohei Saijo</u>, Jee-weon Jung, Chenda Li, Shinji Watanabe, and Yanmin Qian,
 "**Beyond Performance Plateaus: A Comprehensive Study on Scalability in Speech Enhancement,**"
-2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024 (to appear).
+2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024.
 
 ---
 
