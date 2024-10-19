@@ -88,13 +88,14 @@
         </article>
 
         <p><b>Abstract:</b>
-            This page provides some audio examples of speech distortions we focus on in the ICASSP2025 URGENT Challenge.
+            This page provides some audio examples of speech distortions we focus on in the Interspeech 2025 URGENT
+            Challenge.
             Each example has clean speech, distorted speech, and enhanced speech.
             The enhanced speech is obtained using the baseline model trained for the "URGENT Challenge 2024", which did
-            not see disrotions considered in the URGENT ICASSP2025 challenge.
+            not see distortions considered in the URGENT Interspeech 2025 challenge.
             <b>Unfortunately, the model does not generalize well for unseen distortions.
-                This motivates us to organize the ICASSP2025 URGENT Challenge, which considers
-                more diverse types of distortions and to aims to build a more universal, robust, and
+                This motivates us to include more diverse types of distortions and to aims to build a more universal,
+                robust, and
                 generalizable speech enhancement model.</b>
         </p>
 
@@ -102,86 +103,10 @@
             Contents:
         </h2>
         <p>
-            <a href="#loudness_transition">Audio examples of loudness transition</a><br>
-            <a href="#nonflat_fequency_responce">Audio examples of non-flat frequency response</a><br>
             <a href="#packet_loss">Audio examples of packet loss</a><br>
             <a href="#codec_loss">Audio examples of codec lossy compression</a><br>
             <a href="#wind_noise">Audio examples of wind noise</a><br>
         </p>
-
-        <br>
-        <h2 id="loudness_transition">Loudness transition</h2>
-        <p class="text-indent">Loudness transition naturally happens when people speak.
-            The volume of their voice changes based on emotions or points of emphasis.
-            In addition, each person has a unique speaking style, which can also affect loudness transitions.
-            For instance, some people naturally lower their voice at the end of sentences.
-        </p>
-        <p class="text-indent">
-            In the following example, the speaker emphasizes his speech at the middle while lower the volume at the end
-            of
-            utterance, which makes it difficult to hear.
-            Enhancement model just outputs the input as it is since the model is not trained for controlling the gain.
-        </p>
-
-        <table style="width:100%">
-            <tr>
-                </td>
-                <td align="center"> Clean speech <br />
-                    <img src="examples/spectrograms/clean.png" width="400" alt="" /> <br />
-                    <audio controls="">
-                        <source src="examples/wavs/p254_022.wav">
-                    </audio>
-                </td>
-                <td align="center"> Speech with loudness transition <br />
-                    <img src="examples/spectrograms/loudness_transition.png" width="400" alt="" /> <br />
-                    <audio controls="">
-                        <source src="examples/wavs/output_loudness_transition.wav">
-                    </audio>
-                </td>
-                <td align="center"> Enhanced speech <br />
-                    <img src="examples/spectrograms/enhanced_loudness_transition.png" width="400" alt="" /> <br />
-                    <audio controls="">
-                        <source src="examples/enhanced/enhanced_output_loudness_transition.wav">
-                    </audio>
-                </td>
-            </tr>
-        </table>
-
-        <!-------------------------------------------------------------------------------------------------->
-        <br><br>
-        <h2 id="nonflat_freuquency_responce">Non-flat frequency response</h2>
-
-        <p class="text-indent">Frequency responce can sometimes be non-flat due to speaker or microphone
-            characteristics.
-        </p>
-        <p class="text-indent">
-            In the following example, we simulated the non-flat frequency response assuming that the microphone has low
-            responce for low frequencies and a peaky responce around 4000Hz, which significantly changes the speech.
-        </p>
-
-        <table style="width:100%">
-            <tr>
-                </td>
-                <td align="center"> Clean speech <br />
-                    <img src="examples/spectrograms/clean.png" width="400" alt="" /> <br />
-                    <audio controls="">
-                        <source src="examples/wavs/p254_022.wav">
-                    </audio>
-                </td>
-                <td align="center"> Speech distorted by non-flat frequency response <br />
-                    <img src="examples/spectrograms/nonflat_freqres.png" width="400" alt="" /> <br />
-                    <audio controls="">
-                        <source src="examples/wavs/output_nonflat_freqres.wav">
-                    </audio>
-                </td>
-                <td align="center"> Enhanced speech <br />
-                    <img src="examples/spectrograms/enhanced_nonflat_freqres.png" width="400" alt="" /> <br />
-                    <audio controls="">
-                        <source src="examples/enhanced/enhanced_output_nonflat_freqres.wav">
-                    </audio>
-                </td>
-            </tr>
-        </table>
 
         <!-------------------------------------------------------------------------------------------------->
         <br><br>
