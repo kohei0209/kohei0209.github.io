@@ -30,7 +30,7 @@ National Institute of Advanced Industrial Science and Technology (AIST), Tokyo, 
 <span style="color: Gray; ">Nov. 2023 - Aug. 2024</span>  
 Mitsubishi Electric Research Laboratories, MA, USA
 * Research internship
-* Worked on [**unsupervised speech separation**](https://www.isca-archive.org/interspeech_2024/saijo24_interspeech.html), [**state-of-the-art speech separation model**](https://arxiv.org/abs/2408.03440), and [**text-queried target sound extraction**](https://arxiv.org/abs/2409.13152).
+* Worked on [**unsupervised speech separation**](https://www.isca-archive.org/interspeech_2024/saijo24_interspeech.html), [**state-of-the-art speech separation model**](https://arxiv.org/abs/2408.03440), [**text-queried target sound extraction**](https://arxiv.org/abs/2409.13152), and [**unified source separation**](https://arxiv.org/abs/2410.23987).
 * Mentor: [Jonathan Le Roux](https://www.jonathanleroux.org/index.html)
 
 ---
@@ -61,6 +61,18 @@ LINE Corporation, Tokyo, Japan
 
 ## <u><font color="DarkOliveGreen">Publications</font></u>
 
+### Preprint
+
+<u>Kohei Saijo</u>, Janek Ebbers, François G Germain, Gordon Wichern, and Jonathan Le Roux,
+"**Task-Aware Unified Source Separation,**" arXiv preprint, 2024. [[arXiv]](https://arxiv.org/abs/2410.23987)
+
+<u>Kohei Saijo</u>, Janek Ebbers, François G Germain, Gordon Wichern, and Jonathan Le Roux,
+"**Leveraging Audio-Only Data for Text-Queried Target Sound Extraction,**" arXiv preprint, 2024. [[arXiv]](https://arxiv.org/abs/2409.13152)
+
+
+<br>
+
+
 ### International conference (peer-reviewed, first author)
 
 <u>Kohei Saijo</u>, Gordon Wichern, François G. Germain, Zexu Pan, and Jonathan Le Roux,
@@ -71,7 +83,7 @@ International Workshop on Acoustic Signal Enhancement (IWAENC), Sept. 2024. [[IE
 
 <u>Kohei Saijo</u>, Gordon Wichern, François G. Germain, Zexu Pan, and Jonathan Le Roux,
 "**Enhanced Reverberation as Supervision for Unsupervised Speech Separation,**"
-2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024. [[ISCA archive]](https://www.isca-archive.org/interspeech_2024/saijo24_interspeech.html#) [[Code]](https://github.com/merlresearch/reverberation-as-supervision)
+2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024. [[arXiv]](https://arxiv.org/abs/2408.03438) [[ISCA archive]](https://www.isca-archive.org/interspeech_2024/saijo24_interspeech.html#) [[Code]](https://github.com/merlresearch/reverberation-as-supervision)
 
 ---
 
