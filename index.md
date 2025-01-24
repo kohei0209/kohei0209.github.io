@@ -13,7 +13,7 @@ Working on speech enhancement and source separation.
 
 [Google Scholar](https://scholar.google.com/citations?user=ptyPzY4AAAAJ&hl=en) | 
 [GitHub](https://github.com/kohei0209) | 
-[Twitter](https://twitter.com/kohei_1979) |
+[X](https://twitter.com/kohei_1979) |
 [CV](./saijo_curriculum_vitae.pdf)
 
 <br>
@@ -30,7 +30,11 @@ National Institute of Advanced Industrial Science and Technology (AIST), Tokyo, 
 <span style="color: Gray; ">Nov. 2023 - Aug. 2024</span>  
 Mitsubishi Electric Research Laboratories, MA, USA
 * Research internship
-* Worked on [**unsupervised speech separation**](https://www.isca-archive.org/interspeech_2024/saijo24_interspeech.html), [**state-of-the-art speech separation model**](https://arxiv.org/abs/2408.03440), [**text-queried target sound extraction**](https://arxiv.org/abs/2409.13152), and [**unified source separation**](https://arxiv.org/abs/2410.23987).
+* Worked on 
+    * [**unsupervised speech separation**](https://www.isca-archive.org/interspeech_2024/saijo24_interspeech.html) (Interspeech 2024),
+    * [**state-of-the-art speech separation model**](https://arxiv.org/abs/2408.03440) (IWAENC 2024),
+    * [**text-queried target sound extraction**](https://arxiv.org/abs/2409.13152) (ICASSP 2025), and 
+    * [**unified source separation**](https://arxiv.org/abs/2410.23987) (ICASSP 2025)
 * Mentor: [Jonathan Le Roux](https://www.jonathanleroux.org/index.html)
 
 ---
@@ -38,7 +42,8 @@ Mitsubishi Electric Research Laboratories, MA, USA
 <span style="color: Gray; ">Apr. 2023 - July 2023</span>  
 Carnegie Mellon University, Pittsburgh, PA, USA
 * Visiting scholar
-* Worked on [**multi-task universal speech enhancement**](http://arxiv.org/abs/2310.08277)
+* Worked on [**multi-task universal speech enhancement**](http://arxiv.org/abs/2310.08277) (ASRU 2023)
+* The work was accepted to ASRU2023
 * Mentor: [Shinji Watanabe](https://sites.google.com/view/shinjiwatanabe)
 
 ---
@@ -46,7 +51,8 @@ Carnegie Mellon University, Pittsburgh, PA, USA
 <span style="color: Gray; ">Sep. 2021 - Apr. 2022</span>  
 LINE Corporation, Tokyo, Japan
 * Part-time researcher
-* Worked on [**unsupervised multi-channel source separation**](https://www.isca-speech.org/archive/interspeech_2022/saijo22b_interspeech.html)
+* Worked on [**unsupervised multi-channel source separation**](https://www.isca-speech.org/archive/interspeech_2022/saijo22b_interspeech.html) (Interspeech 2022)
+* The work was accepted to Interspeech 2022
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
 ---
@@ -54,7 +60,7 @@ LINE Corporation, Tokyo, Japan
 <span style="color: Gray; ">Aug. 2021 - Sep. 2021</span>  
 LINE Corporation, Tokyo, Japan
 * Research internship
-* Worked on [**multi-channel joint source separation and dereverberation**](https://www.isca-speech.org/archive/interspeech_2022/saijo22_interspeech.html)
+* Worked on [**multi-channel joint source separation and dereverberation**](https://www.isca-speech.org/archive/interspeech_2022/saijo22_interspeech.html) (Interspeech 2022)
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
 <br>
@@ -82,7 +88,7 @@ N/A
 <u>Kohei Saijo</u>, Gordon Wichern, François G. Germain, Zexu Pan, and Jonathan Le Roux,
 "**TF-Locoformer: Transformer with Local Modeling by Convolution for Speech Separation and Enhancement,**"
 International Workshop on Acoustic Signal Enhancement (IWAENC), Sept. 2024. [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/10694313) [[arXiv]](https://arxiv.org/abs/2408.03440) [[Code]](https://github.com/merlresearch/tf-locoformer)
-<b><span style="color: #CC0033; ">Best Student Paper Award Finalist</span></b>
+<span style="color: #CC0033; "><b>Best Student Paper Award Finalist</b></span>
 
 ---
 
