@@ -64,7 +64,6 @@ LINE Corporation, Tokyo, Japan
 ### Preprint
 N/A
 
-
 <br>
 
 
@@ -73,12 +72,17 @@ N/A
 <u>Kohei Saijo</u>, Janek Ebbers, François G Germain, Gordon Wichern, and Jonathan Le Roux,
 "**Task-Aware Unified Source Separation,**" 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), April 2025 (to appear). [[arXiv]](https://arxiv.org/abs/2410.23987)
 
+---
+
 <u>Kohei Saijo</u>, Janek Ebbers, François G Germain, Sameer Khurana, Gordon Wichern, and Jonathan Le Roux,
 "**Leveraging Audio-Only Data for Text-Queried Target Sound Extraction,**" 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), April 2025 (to appear). [[arXiv]](https://arxiv.org/abs/2409.13152)
+
+---
 
 <u>Kohei Saijo</u>, Gordon Wichern, François G. Germain, Zexu Pan, and Jonathan Le Roux,
 "**TF-Locoformer: Transformer with Local Modeling by Convolution for Speech Separation and Enhancement,**"
 International Workshop on Acoustic Signal Enhancement (IWAENC), Sept. 2024. [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/10694313) [[arXiv]](https://arxiv.org/abs/2408.03440) [[Code]](https://github.com/merlresearch/tf-locoformer)
+<b><span style="color: #CC0033; ">Best Student Paper Award Finalist</span></b>
 
 ---
 
