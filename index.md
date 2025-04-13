@@ -7,8 +7,8 @@ Working on speech enhancement and source separation.
 
 ### Research Interest
 * Unsupervised source separation
-* Universal speech enhancement
-* Multi-channel source separation
+* General sound source separation
+* Speech enhancement
  
 
 [Google Scholar](https://scholar.google.com/citations?user=ptyPzY4AAAAJ&hl=en) | 
@@ -43,7 +43,6 @@ Mitsubishi Electric Research Laboratories, MA, USA
 Carnegie Mellon University, Pittsburgh, PA, USA
 * Visiting scholar
 * Worked on [**multi-task universal speech enhancement**](http://arxiv.org/abs/2310.08277) (ASRU 2023)
-* The work was accepted to ASRU2023
 * Mentor: [Shinji Watanabe](https://sites.google.com/view/shinjiwatanabe)
 
 ---
@@ -52,7 +51,6 @@ Carnegie Mellon University, Pittsburgh, PA, USA
 LINE Corporation, Tokyo, Japan
 * Part-time researcher
 * Worked on [**unsupervised multi-channel source separation**](https://www.isca-speech.org/archive/interspeech_2022/saijo22b_interspeech.html) (Interspeech 2022)
-* The work was accepted to Interspeech 2022
 * Mentor: [Robin Scheibler](http://www.robinscheibler.org/)
 
 ---
@@ -76,12 +74,12 @@ N/A
 ### International conference (peer-reviewed, first author)
 
 <u>Kohei Saijo</u>, Janek Ebbers, François G Germain, Gordon Wichern, and Jonathan Le Roux,
-"**Task-Aware Unified Source Separation,**" 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), April 2025 (to appear). [[arXiv]](https://arxiv.org/abs/2410.23987)
+"**Task-Aware Unified Source Separation,**" 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), April 2025. [[arXiv]](https://arxiv.org/abs/2410.23987) [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/10887819) [[Code]](https://github.com/merlresearch/unified-source-separation) [[Demo page]](https://github.com/merlresearch/unified-source-separation)
 
 ---
 
 <u>Kohei Saijo</u>, Janek Ebbers, François G Germain, Sameer Khurana, Gordon Wichern, and Jonathan Le Roux,
-"**Leveraging Audio-Only Data for Text-Queried Target Sound Extraction,**" 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), April 2025 (to appear). [[arXiv]](https://arxiv.org/abs/2409.13152)
+"**Leveraging Audio-Only Data for Text-Queried Target Sound Extraction,**" 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). [[arXiv]](https://arxiv.org/abs/2409.13152) [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/10888769)
 
 ---
 
@@ -158,6 +156,10 @@ International Workshop on Acoustic Signal Enhancement (IWAENC), Sept. 2024. [[IE
 
 ### International conference (peer-reviewed, co-author)
 
+Tomohiro Hayashi, Riku Ogino, <u>Kohei Saijo</u> and Tetsuji Ogawa, “**What to Refer and How? - Exploring Handling of Auxiliary Information in Target Speaker Extraction,**” 2024 Asia Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), December 2024.
+
+---
+
 Zexu Pan, Gordon Wichern, François G. Germain, <u>Kohei Saijo</u> and Jonathan Le Roux,
 "**PARIS: Pseudo-AutoRegressIve Siamese Training for Online Speech Separation,**"
 2024 25th Annual Conference of International Speech Communication Association (INTERSPEECH), Sept. 2024.
@@ -197,6 +199,9 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 <br>
 
 ### Domestic conference / workshop (in Japanese)
+
+<details>
+<summary>Click to expand</summary>
 
 <u>西城耕平</u>，小川哲司，
 ”**音源の分離と再混合による事前学習を必要としないモノラル教師なし音源分離，**”
@@ -239,6 +244,8 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 日本音響学会研究発表会講演論文集(ASJ)，March 2021．
 
 ---
+
+</details>
 
 <br>
 
