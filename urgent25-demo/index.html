@@ -1,0 +1,456 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Interspeech 2025 URGENT Speech Enhancement Challenge</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <!-- <link rel="shortcut icon" href="../../images/taco.png"> -->
+    <script>
+        function play(path) {
+            {
+                var player = document.getElementById('player');
+                player.src = path;
+                player.play();
+            }
+        }
+    </script>
+    <style>
+        .audio-cell {
+            /* Center audio widgets in the table cell. */
+            text-align: center;
+            padding-bottom: 1px;
+            padding-top: 1px;
+        }
+
+        .audio-cell-padded {
+            text-align: center;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        .audio-header {
+            /* Don't wrap header text. */
+            white-space: nowrap;
+            /* Some breaking space between headers for readability. */
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        .reference-cell {
+            /* For uniformity and to wrap long reference text, limit the reference cell's width. */
+            width: 25%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .sample audio {
+            vertical-align: middle;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+        .round-button {
+            box-sizing: border-box;
+            display: block;
+            width: 30px;
+            height: 30px;
+            padding-top: 8px;
+            padding-left: 3px;
+            line-height: 6px;
+            border: 1.2px solid #000;
+            border-radius: 50%;
+            color: #000;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.00);
+            font-size: 6px;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+            transition: all 0.2s ease;
+        }
+
+        .round-button:hover {
+            background-color: rgba(0, 0, 0, 0.0);
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 1);
+        }
+
+        .round-button:active {
+            background-color: rgba(0, 0, 0, 0.01);
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <article>
+            <header>
+                <h1>Interspeech 2025 URGENT Speech Enhancement Challenge </h1>
+            </header>
+        </article>
+        <div>
+            <p>
+                Anonymous authors
+            </p>
+        </div>
+
+
+        <p><b>Abstract:</b>
+            There has been a growing effort to develop universal speech enhancement (SE) to handle inputs with various
+            speech distortions and recording conditions. The URGENT Challenge series aims to foster such universal SE by
+            embracing a broad range of distortion types, increasing data diversity, and incorporating extensive
+            evaluation metrics. This work introduces the Interspeech 2025 URGENT Challenge, the second edition of the
+            series, to explore several aspects that have received limited attention so far: language dependency,
+            universality for more distortion types, data scalability, and the effectiveness of using noisy training
+            data. We received 32 submissions, where the best system uses a discriminative model, while most other
+            competitive ones are hybrid methods. Analysis reveals some key findings: (i) some generative or hybrid
+            approaches are preferred in subjective evaluations over the top discriminative model, and (ii) purely
+            generative SE models can exhibit language dependency.
+        </p>
+
+        <h2>
+            Contents:
+        </h2>
+        <p>
+            <a href="#English1">English audio example 1</a><br>
+            <a href="#English2">English audio example 2</a><br>
+            <a href="#English3">English audio example 3</a><br>
+            <a href="#Japanese1">Japanese audio example 1</a><br>
+            <a href="#Japanese2">Japanese audio example 2</a><br>
+        </p>
+
+
+        <h2 id="English1">English audio example 1</h2>
+
+        <p class="text-indent">
+            Distortion types: additive noise (SNR: 0.1[dB]) and reverberation.
+
+            <br><br>This is an example under a low SNR condition.
+            All the systems remove noise very well.
+            Although the spectrogram of T13 looks very clean, some words are pronounced wrongly or unclearly.
+        </p>
+
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Noisy speech <br />
+                    <img src="examples/fileid_1/spectrograms/T22 (noisy).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_1/audios_wav/T22 (noisy).wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech <br />
+                    <img src="examples/fileid_1/spectrograms/clean.png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_1/audios_wav/clean.wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> T1 (discriminative) <br />
+                    <img src="examples/fileid_1/spectrograms/T1 (discriminative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_1/audios_wav/T1 (discriminative).wav">
+                    </audio>
+                </td>
+                <td align="center"> T2 (hybrid) <br />
+                    <img src="examples/fileid_1/spectrograms/T2 (hybrid).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_1/audios_wav/T2 (hybrid).wav">
+                    </audio>
+                </td>
+                <td align="center"> T3 (hybrid) <br />
+                    <img src="examples/fileid_1/spectrograms/T3 (hybrid).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_1/audios_wav/T3 (hybrid).wav">
+                    </audio>
+                </td>
+                <td align="center"> T10 (discriminative) <br />
+                    <img src="examples/fileid_1/spectrograms/T10 (discriminative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_1/audios_wav/T10 (discriminative).wav">
+                    </audio>
+                </td>
+                <td align="center"> T13 (generative) <br />
+                    <img src="examples/fileid_1/spectrograms/T13 (generative).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_1/audios_wav/T13 (generative).wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <br>
+        </br>
+
+        <h2 id="English2">English audio example 2</h2>
+
+        <p class="text-indent">
+            Distortion types: additive noise (SNR: 6.1[dB]), clipping, bandwidth limitation, and mp3 codec.
+
+            <br><br>This is an example with degraded by multiple distortions.
+            The outputs from discriminative models (T1 and T10) contain weird artifacts above 4kHz, while those from
+            generative or hybrid approaches sound clean.
+            Among them, the purely generative model, T13, restores the speech very well.
+        </p>
+
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Noisy speech <br />
+                    <img src="examples/fileid_8/spectrograms/T22 (noisy).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_8/audios_wav/T22 (noisy).wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech <br />
+                    <img src="examples/fileid_8/spectrograms/clean.png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_8/audios_wav/clean.wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> T1 (discriminative) <br />
+                    <img src="examples/fileid_8/spectrograms/T1 (discriminative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_8/audios_wav/T1 (discriminative).wav">
+                    </audio>
+                </td>
+                <td align="center"> T2 (hybrid) <br />
+                    <img src="examples/fileid_8/spectrograms/T2 (hybrid).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_8/audios_wav/T2 (hybrid).wav">
+                    </audio>
+                </td>
+                <td align="center"> T3 (hybrid) <br />
+                    <img src="examples/fileid_8/spectrograms/T3 (hybrid).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_8/audios_wav/T3 (hybrid).wav">
+                    </audio>
+                </td>
+                <td align="center"> T10 (discriminative) <br />
+                    <img src="examples/fileid_8/spectrograms/T10 (discriminative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_8/audios_wav/T10 (discriminative).wav">
+                    </audio>
+                </td>
+                <td align="center"> T13 (generative) <br />
+                    <img src="examples/fileid_8/spectrograms/T13 (generative).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_8/audios_wav/T13 (generative).wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
+
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <br>
+        </br>
+
+        <h2 id="English3">English audio example 3</h2>
+
+        <p class="text-indent">
+            Distortion types: additive noise (SNR: 10.2[dB]).
+
+            <br><br>This is an example of an easy sample.
+            All the systems work very well.
+        </p>
+
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Noisy speech <br />
+                    <img src="examples/fileid_231/spectrograms/T22 (noisy).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_231/audios_wav/T22 (noisy).wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech <br />
+                    <img src="examples/fileid_231/spectrograms/clean.png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_231/audios_wav/clean.wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> T1 (discriminative) <br />
+                    <img src="examples/fileid_231/spectrograms/T1 (discriminative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_231/audios_wav/T1 (discriminative).wav">
+                    </audio>
+                </td>
+                <td align="center"> T2 (hybrid) <br />
+                    <img src="examples/fileid_231/spectrograms/T2 (hybrid).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_231/audios_wav/T2 (hybrid).wav">
+                    </audio>
+                </td>
+                <td align="center"> T3 (hybrid) <br />
+                    <img src="examples/fileid_231/spectrograms/T3 (hybrid).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_231/audios_wav/T3 (hybrid).wav">
+                    </audio>
+                </td>
+                <td align="center"> T10 (discriminative) <br />
+                    <img src="examples/fileid_231/spectrograms/T10 (discriminative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_231/audios_wav/T10 (discriminative).wav">
+                    </audio>
+                </td>
+                <td align="center"> T13 (generative) <br />
+                    <img src="examples/fileid_231/spectrograms/T13 (generative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_231/audios_wav/T13 (generative).wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
+
+        <!----------------------------------------------------------------------------------------------------------------------------------------------------------------->
+        <br>
+        </br>
+
+        <h2 id="#Japanese1">Japanese audio example 1</h2>
+
+        <p class="text-indent">
+            Distortion types: additive noise (SNR: 3.5[dB]), reverberation, clipping, DAC codec, and bandwidth
+            limitation.
+
+            <br><br>This is an harsh example with degraded by five distortions.
+            Still, it is not very difficult for native Japanese speaker to recognize the speech content.
+            Although not perfect, the outputs from the first four systems (T1, T2, T3, and T10) sound okay.
+            However, interestingly, <b>the output from T13 does not sound Japanese but rather resembles English or other
+                European languages which made up the majority of the training data.</b>
+        </p>
+
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Noisy speech <br />
+                    <img src="examples/fileid_19/spectrograms/T22 (noisy).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_19/audios_wav/T22 (noisy).wav">
+                    </audio>
+                </td>
+                <td align="center"> Clean speech <br />
+                    <img src="examples/fileid_19//spectrograms/clean.png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_19//audios_wav/clean.wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> T1 (discriminative) <br />
+                    <img src="examples/fileid_19//spectrograms/T1 (discriminative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_19//audios_wav/T1 (discriminative).wav">
+                    </audio>
+                </td>
+                <td align="center"> T2 (hybrid) <br />
+                    <img src="examples/fileid_19//spectrograms/T2 (hybrid).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_19//audios_wav/T2 (hybrid).wav">
+                    </audio>
+                </td>
+                <td align="center"> T3 (hybrid) <br />
+                    <img src="examples/fileid_19//spectrograms/T3 (hybrid).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_19//audios_wav/T3 (hybrid).wav">
+                    </audio>
+                </td>
+                <td align="center"> T10 (discriminative) <br />
+                    <img src="examples/fileid_19//spectrograms/T10 (discriminative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_19//audios_wav/T10 (discriminative).wav">
+                    </audio>
+                </td>
+                <td align="center"> T13 (generative) <br />
+                    <img src="examples/fileid_19//spectrograms/T13 (generative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_19//audios_wav/T13 (generative).wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
+
+        <h2 id="#Japanese2">Japanese audio example 2</h2>
+
+        <p class="text-indent">
+            Distortion types: additive noise, packet loss
+
+            <br><br>This is an example of real-recorded noisy speech with additional packet loss.
+            Since we do not have the corresponding clean speech, we attached the original noisy speech without packet
+            loss instead.
+
+            Similarly to <a href="#English2">English audio example 2</a><br> which has bandwidth limitation, the outputs
+            from the discriminative models (T1 and T10) have some weird artifacts at packet-lossed frames.
+            In contrast, the hybrid or generative models (T2, T3, and T13) do not have such an artifact, although the
+            packet-lossed frames are not necessarily inpainted very well.
+
+            <b>Interestingly, the inpainted frames of T13's output sound like Japanese produced by native English
+                speakers who speak Japanese as a second language (e.g., "kudasai" -> "kudosai").</b>
+        </p>
+
+        <table style="width:100%">
+            <tr>
+                <td align="center"> Noisy speech <br />
+                    <img src="examples/fileid_900/spectrograms/T22 (noisy).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_900/audios_wav/T22 (noisy).wav">
+                    </audio>
+                </td>
+                <td align="center"> Original noisy speech (w/o packet loss) <br />
+                    <img src="examples/fileid_900//spectrograms/noisy_orig.png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_900//audios_wav/noisy_orig.wav">
+                    </audio>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"> T1 (discriminative) <br />
+                    <img src="examples/fileid_900//spectrograms/T1 (discriminative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_900//audios_wav/T1 (discriminative).wav">
+                    </audio>
+                </td>
+                <td align="center"> T2 (hybrid) <br />
+                    <img src="examples/fileid_900//spectrograms/T2 (hybrid).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_900//audios_wav/T2 (hybrid).wav">
+                    </audio>
+                </td>
+                <td align="center"> T3 (hybrid) <br />
+                    <img src="examples/fileid_900//spectrograms/T3 (hybrid).png" style="width: 100%;" alt="" /> <br />
+                    <audio controls="">
+                        <source src="examples/fileid_900//audios_wav/T3 (hybrid).wav">
+                    </audio>
+                </td>
+                <td align="center"> T10 (discriminative) <br />
+                    <img src="examples/fileid_900//spectrograms/T10 (discriminative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_900//audios_wav/T10 (discriminative).wav">
+                    </audio>
+                </td>
+                <td align="center"> T13 (generative) <br />
+                    <img src="examples/fileid_900//spectrograms/T13 (generative).png" style="width: 100%;" alt="" />
+                    <br />
+                    <audio controls="">
+                        <source src="examples/fileid_900//audios_wav/T13 (generative).wav">
+                    </audio>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+
+</html>
