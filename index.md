@@ -208,6 +208,7 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 ### Domestic conference / workshop (in Japanese)
 
 <details>
+
 <summary>Click to expand</summary>
 
 <br>
