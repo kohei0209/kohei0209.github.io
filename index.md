@@ -66,12 +66,17 @@ LINE Corporation, Tokyo, Japan
 ## <u><font color="DarkOliveGreen">Publications</font></u>
 
 ### Preprint
-N/A
+
+<u>Kohei Saijo</u>, Yoshiaki Bando, "**Is MixIT Really Unsuitable for Correlated Sources? Exploring MixIT for Unsupervised Pre-training in Music Source Separation**." [[arXiv]](https://arxiv.org/abs/2505.07631)
 
 <br>
 
 
 ### International conference (peer-reviewed, first author)
+
+<u>Kohei Saijo</u>, Tetsuji Ogawa, “**A Comparative Study on Positional Encoding for Time-frequency Domain Dual-path Transformer-based Source Separation Models**,” 2025 33rd European Signal Processing Conference (EUSIPCO), September 2025 (to appear) [[arXiv]](https://arxiv.org/abs/2504.19605).
+
+<u>Kohei Saijo</u>, Wangyou Zhang, Samuele Cornell, Robin Scheibler, Chenda Li, Zhaoheng Ni, Anurag Kumar, Marvin Sach, Yihui Fu, Wei Wang, Tim Fingscheidt, and Shinji Watanabe,  “**Interspeech 2025 URGENT Speech Enhancement Challenge**,” 2025 26th Annual Conference of International Speech Communication Association (INTERSPEECH), August 2025 (to appear) [[arXiv]](http://arxiv.org/abs/2505.23212) [[Demo page]](https://kohei0209.github.io/urgent25-demo/) [[Challenge webpage]](https://urgent-challenge.github.io/urgent2025/).
 
 <u>Kohei Saijo</u>, Janek Ebbers, François G Germain, Gordon Wichern, and Jonathan Le Roux,
 "**Task-Aware Unified Source Separation,**" 2025 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), April 2025. [[arXiv]](https://arxiv.org/abs/2410.23987) [[IEEE Xplore]](https://ieeexplore.ieee.org/abstract/document/10887819) [[Code]](https://github.com/merlresearch/unified-source-separation) [[Demo page]](https://github.com/merlresearch/unified-source-separation)
@@ -156,6 +161,8 @@ International Workshop on Acoustic Signal Enhancement (IWAENC), Sept. 2024. [[IE
 
 ### International conference (peer-reviewed, co-author)
 
+Wangyou Zhang, <u>Kohei Saijo</u>, Samuele Cornell, Robin Scheibler, Chenda Li, Zhaoheng Ni, Anurag Kumar, Marvin Sach, Wei Wang, Yihui Fu, Shinji Watanabe, Tim Fingscheidt, and Yanmin Qian, “**Lessons Learned from the URGENT 2024 Speech Enhancement Challenge**,” 2025 26th Annual Conference of International Speech Communication Association (INTERSPEECH), August 2025 (to appear).
+
 Tomohiro Hayashi, Riku Ogino, <u>Kohei Saijo</u> and Tetsuji Ogawa, “**What to Refer and How? - Exploring Handling of Auxiliary Information in Target Speaker Extraction,**” 2024 Asia Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), December 2024.
 
 ---
@@ -202,6 +209,8 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 
 <details>
 <summary>Click to expand</summary>
+
+<br>
 
 <u>西城耕平</u>，小川哲司，
 ”**音源の分離と再混合による事前学習を必要としないモノラル教師なし音源分離，**”
