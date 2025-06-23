@@ -207,10 +207,6 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 
 ### Domestic conference / workshop (in Japanese)
 
-<details>
-
-<summary>Click to expand</summary>
-
 <br>
 
 <u>西城耕平</u>，小川哲司，
@@ -254,8 +250,6 @@ Riku Ogino, <u>Kohei Saijo</u>, Tetsuji Ogawa,
 日本音響学会研究発表会講演論文集(ASJ)，March 2021．
 
 ---
-
-</details>
 
 <br>
 
