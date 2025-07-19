@@ -2,13 +2,18 @@
 
 ### Kohei Saijo / 西城 耕平
 
-2nd year Ph.D student in [Media Intelligence Laboratory](http://www.pcl.cs.waseda.ac.jp/) at Waseda University in Japan.
+3rd year Ph.D student in [Media Intelligence Laboratory](http://www.pcl.cs.waseda.ac.jp/) at Waseda University in Japan.
 Working on speech enhancement and source separation.
 
 ### Research Interest
-* Unsupervised source separation
-* General sound source separation
+* Source separation
+    * Unsupervised learning
+    * Unified source separation
+    * Target sound extraction
+    * Blind source separation
 * Speech enhancement
+    * Universal speech enhancement
+
  
 
 [Google Scholar](https://scholar.google.com/citations?user=ptyPzY4AAAAJ&hl=en) | 
@@ -23,6 +28,8 @@ Working on speech enhancement and source separation.
 <span style="color: Gray; ">Oct. 2024 - Present</span>  
 National Institute of Advanced Industrial Science and Technology (AIST), Tokyo, Japan
 * Research assistant
+* Worked on
+    * [**unsupervised pre-training for music source separation**](https://arxiv.org/abs/2505.07631) (WASPAA 2025)
 * Mentor: [Yoshiaki Bando](https://www.ybando.jp/)
 
 ---
@@ -66,13 +73,14 @@ LINE Corporation, Tokyo, Japan
 ## <u><font color="DarkOliveGreen">Publications</font></u>
 
 ### Preprint
-
-<u>Kohei Saijo</u>, Yoshiaki Bando, "**Is MixIT Really Unsuitable for Correlated Sources? Exploring MixIT for Unsupervised Pre-training in Music Source Separation**." [[arXiv]](https://arxiv.org/abs/2505.07631)
+N/A
 
 <br>
 
 
 ### International conference (peer-reviewed, first author)
+
+<u>Kohei Saijo</u>, Yoshiaki Bando, "**Is MixIT Really Unsuitable for Correlated Sources? Exploring MixIT for Unsupervised Pre-training in Music Source Separation**," 2025 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), October 2025 (to appear) [[arXiv]](https://arxiv.org/abs/2505.07631).
 
 <u>Kohei Saijo</u>, Tetsuji Ogawa, “**A Comparative Study on Positional Encoding for Time-frequency Domain Dual-path Transformer-based Source Separation Models**,” 2025 33rd European Signal Processing Conference (EUSIPCO), September 2025 (to appear) [[arXiv]](https://arxiv.org/abs/2504.19605).
 
@@ -161,7 +169,13 @@ International Workshop on Acoustic Signal Enhancement (IWAENC), Sept. 2024. [[IE
 
 ### International conference (peer-reviewed, co-author)
 
+Francesco Paissan, Gordon Wichern, Yoshiki Masuyama, Ryo Aihara, François G. Germain, <u>Kohei Saijo</u>, and Jonathan Le Roux, "**FasTUSS: Faster Task-Aware Unified Source Separation**," 2025 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA), October 2025 (to appear).
+
+---
+
 Wangyou Zhang, <u>Kohei Saijo</u>, Samuele Cornell, Robin Scheibler, Chenda Li, Zhaoheng Ni, Anurag Kumar, Marvin Sach, Wei Wang, Yihui Fu, Shinji Watanabe, Tim Fingscheidt, and Yanmin Qian, “**Lessons Learned from the URGENT 2024 Speech Enhancement Challenge**,” 2025 26th Annual Conference of International Speech Communication Association (INTERSPEECH), August 2025 (to appear).
+
+---
 
 Tomohiro Hayashi, Riku Ogino, <u>Kohei Saijo</u> and Tetsuji Ogawa, “**What to Refer and How? - Exploring Handling of Auxiliary Information in Target Speaker Extraction,**” 2024 Asia Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), December 2024.
 
