@@ -1,5 +1,35 @@
-theme: jekyll-theme-slate
 title: Kohei Saijo
-
+first_name: Kohei
+last_name: Saijo
+email: saijo[at]pcl.cs.waseda.ac.jp
+description: >
+  Personal homepage of Kohei Saijo, a speech AI researcher working on speech
+  enhancement and source separation.
+lang: en
+icon: 🎙️
+url: https://kohei0209.github.io
+baseurl:
+navbar_fixed: true
+footer_fixed: true
+search_enabled: false
+max_width: 980px
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+include:
+  - _pages
+theme: al_folio_core
 plugins:
- - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-scholar
+  - jekyll-sitemap
+scholar:
+  last_name: [Saijo]
+  style: ieee
+  locale: en
+keep_files:
+  - CNAME
+  - .nojekyll
+exclude:
+  - vendor
